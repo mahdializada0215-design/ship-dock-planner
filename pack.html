@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #121218;
+  --color-text: #e4e4ed;
+  --color-navbar-bg: #1a1a24;
+  --color-bg-chat-view: #121218;
+  --color-bg-secondary: #1a1a24;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-hover: #2a2a38;
+  --color-surface: #1e1e2a;
+  --color-surface-hover: #2a2a38;
+  --color-surface-active: #353546;
+  --color-border: rgba(255, 255, 255, .12);
+  --color-border-light: rgba(255, 255, 255, .06);
+  --color-border-strong: #3a3a4e;
+  --color-primary: #8575ff;
+  --color-primary-dark: #4200db;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-hover-border: #4200db;
+  --color-nav-icon-active: #8575ff;
+  --color-nav-hover-border: #8575ff;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-focus-ring: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent: #8575ff;
+  --color-accent-foreground: #8575ff;
+  --color-accent-dark: #4200db;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent-inverse: #ffffff;
+  --color-link: #8575ff;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent);
+  --color-primary-bg-solid: #1a1530;
+  --color-user-bubble: #333843;
+  --color-user-bubble-text: #e4e4ed;
+  --color-text-secondary: #a0a0b4;
+  --color-text-tertiary: #8a8a9a;
+  --color-text-muted: #6e6e82;
+  --color-text-on-primary: #ffffff;
+  --color-success: #4ade80;
+  --color-success-dark: #00802f;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #1c2c22;
+  --color-success-border: #0e3d1c;
+  --color-success-foreground: #4ade80;
+  --color-success-dark-foreground: #00802f;
+  --color-success-text: #4ade80;
+  --color-error: #ff6b6b;
+  --color-error-dark: #db0000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #3b1a24;
+  --color-error-bg: #3b1a24;
+  --color-error-border: #5e1a24;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #ff6b6b;
+  --color-error-dark-foreground: #db0000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #ff6b6b;
+  --color-warning: #fbbf24;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #3d3520;
+  --color-warning-border: #5e4a1a;
+  --color-warning-foreground: #fbbf24;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #60a5fa;
+  --color-info-dark: #006ce0;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #1a2a42;
+  --color-info-border: #0f3d6e;
+  --color-info-foreground: #60a5fa;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .7);
+  --color-shadow: rgba(0, 0, 0, .3);
+  --color-hover: rgba(255, 255, 255, .05);
+  --color-tooltip-bg: rgba(30, 30, 42, .95);
+  --color-tooltip-text: #e4e4ed;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #ff6b6b;
+  --color-voice-red-dark: #db0000;
+  --color-voice-amber: #fbbf24;
+  --color-voice-purple-glow: rgba(133, 117, 255, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .3);
+  --color-success-bg-solid: #1a3d28;
+  --color-error-bg-solid: #4a2028;
+  --color-error-border-solid: #5e1a24;
+  --color-warning-bg-solid: #4a3a1e;
+  --color-warning-text: #fbbf24;
+  --color-info-bg-solid: #1a3050;
+  --color-info-bg-solid-alt: #222240;
+  --color-info-text: #60a5fa;
+  --color-info-text-alt: #818cf8;
+  --color-emerald: #34d399;
+  --color-teal: #5eead4;
+  --color-code-bg: #1e1e2a;
+  --color-code-header-bg: #252535;
+  --color-code-text: #e4e4ed;
+  --color-code-border: #2e2e3e;
+  --color-code-muted: #6e6e82;
+  --color-inline-code-bg: #1e1e2a;
+  --color-inline-code-text: #e4e4ed;
+  --color-inline-code-border: #2e2e3e;
+  --color-scrollbar-thumb: #3a3a4e;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e4e4ed;
+  --color-graph-node-text-dim: #6e6e82;
+  --color-graph-edge-default: #6e6e82;
+  --color-graph-edge-cross: #F39C12;
+  --color-graph-edge-text: #a0a0b4;
+  --color-graph-edge-stroke: #1a1a24;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #FF4444;
+  --color-graph-external-border: #6e6e82;
+  --color-graph-cat-file: #5DADE2;
+  --color-graph-cat-folder: #AAB7B8;
+  --color-graph-cat-file-aggregate: #5499C7;
+  --color-graph-cat-class: #BB8FCE;
+  --color-graph-cat-function: #58D68D;
+  --color-graph-cat-method: #48C9B0;
+  --color-graph-cat-variable: #F5B041;
+  --color-graph-cat-import: #EB984E;
+  --color-graph-cat-module: #7E8CE0;
+  --color-graph-cat-concept: #EC7063;
+  --color-graph-cat-person: #FF8A8A;
+  --color-graph-cat-org: #76D7C4;
+  --color-graph-cat-organization: #76D7C4;
+  --color-graph-cat-product: #B8B0FE;
+  --color-graph-cat-metric: #FEA0C0;
+  --color-graph-cat-location: #7E9BB5;
+  --color-graph-cat-date: #F092C0;
+  --color-graph-cat-code: #5DADE2;
+  --color-graph-cat-doc: #AAB7B8;
+  --color-graph-cat-url: #45D6B5;
+  --color-graph-cat-email: #8E7CF7;
+  --color-graph-cat-unknown: #D5DBDB;
+  --color-graph-rel-contains: #D5DBDB;
+  --color-graph-rel-extends: #BB8FCE;
+  --color-graph-rel-implements: #5DADE2;
+  --color-graph-rel-imports: #EB984E;
+  --color-graph-rel-uses: #58D68D;
+  --color-graph-rel-calls: #52BE80;
+  --color-graph-rel-references: #F5B041;
+  --color-graph-rel-related-to: #AAB7B8;
+  --color-graph-rel-works-on: #EC7063;
+  --color-graph-rel-owns: #48C9B0;
+  --color-graph-rel-depends-on: #EB984E;
+  --color-graph-rel-parent-of: #D5DBDB;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #6e6e82;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #1e1e2a;
+  --qs-tertiary-background: #1e1e2a;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack HC Balancer</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+  color: #e0e0e0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; }
+
+/* HEADER */
+.header {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  margin-bottom: 6px; flex-wrap: wrap;
+}
+.header h1 { font-size: 1.5rem; color: #fff; letter-spacing: 1px; }
+.site-date { display: flex; align-items: center; gap: 10px; }
+.site-date input[type="text"] {
+  background: transparent; border: none; border-bottom: 1px solid #444;
+  color: #00d4aa; font-size: 0.85rem; font-weight: 600; width: 60px;
+  text-align: center; padding: 2px 4px;
+}
+.site-date input[type="text"]:focus { outline: none; border-bottom-color: #00d4aa; }
+.site-date input[type="date"] {
+  background: transparent; border: none; border-bottom: 1px solid #444;
+  color: #aaa; font-size: 0.8rem; padding: 2px 4px;
+}
+.site-date input[type="date"]:focus { outline: none; border-bottom-color: #00d4aa; }
+.btn-today {
+  background: #0f3460; border: 1px solid #1a4a7a; color: #00d4aa;
+  padding: 3px 8px; border-radius: 4px; font-size: 0.65rem; cursor: pointer;
+  font-weight: 600; text-transform: uppercase;
+}
+.btn-today:hover { background: #1a4a7a; }
+.subtitle { text-align: center; font-size: 0.78rem; color: #888; margin-bottom: 18px; }
+
+/* PARAMS BARS */
+.params-section-label {
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px;
+  font-weight: 700; margin-bottom: 6px; text-align: center;
+  padding-bottom: 4px; border-bottom: 2px solid;
+  display: inline-block; margin-left: 50%; transform: translateX(-50%);
+}
+.params-section-label.pack-label { color: #00d4aa; border-color: #00d4aa; }
+.params-section-label.sd-label { color: #bb86fc; border-color: #bb86fc; }
+
+.params-bar {
+  display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 12px 20px; margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.params-bar.pack-params {
+  background: linear-gradient(135deg, #0a2a3e, #102e44);
+  border-color: rgba(0,212,170,0.15);
+}
+.params-bar.sd-params {
+  background: linear-gradient(135deg, #1a1040, #251550);
+  border-color: rgba(187,134,252,0.2);
+  margin-bottom: 20px;
+}
+.param-item { text-align: center; min-width: 70px; }
+.param-label {
+  font-size: 0.6rem; color: #999; text-transform: uppercase;
+  letter-spacing: 0.5px; font-weight: 600; margin-bottom: 2px;
+}
+.param-item input.pack-input {
+  background: transparent; border: none; border-bottom: 1px dashed #00d4aa;
+  color: #00d4aa; font-size: 1.05rem; font-weight: 700;
+  text-align: center; width: 50px; padding: 0;
+}
+.param-item input.pack-input:focus { outline: none; border-bottom: 1px solid #00d4aa; }
+.param-item input.sd-input {
+  background: transparent; border: none; border-bottom: 1px dashed #bb86fc;
+  color: #bb86fc; font-size: 1.05rem; font-weight: 700;
+  text-align: center; width: 50px; padding: 0;
+}
+.param-item input.sd-input:focus { outline: none; border-bottom: 1px solid #bb86fc; }
+.param-item .auto-calc { font-size: 1.05rem; font-weight: 700; color: #00d4aa; opacity: 0.7; }
+.param-item .auto-calc.sd-auto { color: #bb86fc; }
+
+/* SECTIONS */
+.section {
+  background: linear-gradient(135deg, #16213e, #1a2744);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px; padding: 20px; margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.section.pack-section { border-color: rgba(0,212,170,0.1); }
+.section.sd-section {
+  background: linear-gradient(135deg, #1a1040, #201548);
+  border-color: rgba(187,134,252,0.15);
+}
+.section h2 {
+  font-size: 0.95rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.section h2.gold { color: #ffd700; }
+.section h2.green { color: #00d4aa; }
+.section h2.orange { color: #ffa500; }
+.section h2.blue { color: #5dade2; }
+.section h2.purple { color: #bb86fc; }
+
+/* INPUTS */
+.input-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; margin-bottom: 12px;
+}
+.input-group { display: flex; flex-direction: column; }
+.input-group label {
+  font-size: 0.68rem; color: #ccc; margin-bottom: 4px;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+}
+.input-group input.pack-field {
+  background: #0f3460; border: 2px dashed #a0762060; border-radius: 8px;
+  padding: 10px 12px; font-size: 1.1rem; font-weight: 700; color: #fff;
+  text-align: center; transition: all 0.3s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  animation: amberGlow 2s infinite alternate;
+}
+.input-group input.pack-field:focus {
+  outline: none; border: 2px solid #00d4aa;
+  box-shadow: 0 0 12px rgba(0,212,170,0.3), inset 0 2px 4px rgba(0,0,0,0.2);
+  animation: none;
+}
+.input-group input.pack-field.filled {
+  border: 2px solid #1a4a7a;
+  background: linear-gradient(135deg, #0f3460, #1a3a5a);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.3); animation: none;
+}
+.input-group input.sd-field {
+  background: #1a1040; border: 2px dashed #bb86fc40; border-radius: 8px;
+  padding: 10px 12px; font-size: 1.1rem; font-weight: 700; color: #fff;
+  text-align: center; transition: all 0.3s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  animation: purpleGlow 2s infinite alternate;
+}
+.input-group input.sd-field:focus {
+  outline: none; border: 2px solid #bb86fc;
+  box-shadow: 0 0 12px rgba(187,134,252,0.3), inset 0 2px 4px rgba(0,0,0,0.2);
+  animation: none;
+}
+.input-group input.sd-field.filled {
+  border: 2px solid #5a3a8a;
+  background: linear-gradient(135deg, #1a1040, #2a1a5a);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.3); animation: none;
+}
+.input-group input::placeholder { color: #555; font-size: 0.85rem; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type="number"] { -moz-appearance: textfield; }
+
+@keyframes amberGlow {
+  from { box-shadow: 0 0 4px rgba(255,165,0,0.1), inset 0 2px 4px rgba(0,0,0,0.2); }
+  to { box-shadow: 0 0 10px rgba(255,165,0,0.15), inset 0 2px 4px rgba(0,0,0,0.2); }
+}
+@keyframes purpleGlow {
+  from { box-shadow: 0 0 4px rgba(187,134,252,0.1), inset 0 2px 4px rgba(0,0,0,0.2); }
+  to { box-shadow: 0 0 10px rgba(187,134,252,0.2), inset 0 2px 4px rgba(0,0,0,0.2); }
+}
+
+/* SUMMARY CARDS */
+.summary-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 14px;
+}
+.summary-card {
+  background: linear-gradient(135deg, #0f3460, #142d50);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 14px 10px; text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.summary-card:hover {
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.summary-card.highlight {
+  background: linear-gradient(135deg, #0f3460, #1a5a3a); border: 1px solid #00d4aa;
+}
+.summary-card .card-label {
+  font-size: 0.62rem; color: #999; text-transform: uppercase; margin-bottom: 4px;
+  font-weight: 600; letter-spacing: 0.3px;
+}
+.summary-card .card-value { font-size: 1.4rem; font-weight: 800; color: #fff; }
+.summary-card .card-value.green { color: #00d4aa; }
+.summary-card .card-sub { font-size: 0.62rem; color: #666; margin-top: 2px; }
+
+/* SD CARDS */
+.sd-compare-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 14px;
+}
+.sd-card {
+  background: linear-gradient(135deg, #1a1040, #2a1a50);
+  border: 1px solid rgba(187,134,252,0.2);
+  border-radius: 10px; padding: 14px 10px; text-align: center;
+  transition: transform 0.2s;
+}
+.sd-card:hover { transform: translateY(-2px); }
+.sd-card .card-label {
+  font-size: 0.62rem; color: #999; text-transform: uppercase; margin-bottom: 4px; font-weight: 600;
+}
+.sd-card .card-value { font-size: 1.4rem; font-weight: 800; }
+.sd-card .card-sub { font-size: 0.62rem; color: #666; margin-top: 2px; }
+.sd-card.highlight-sd {
+  background: linear-gradient(135deg, #2a1040, #3a1a60);
+  border: 1px solid #bb86fc;
+}
+
+.status-banner {
+  margin-top: 14px; padding: 14px 20px; border-radius: 10px; text-align: center;
+  font-size: 1rem; font-weight: 700; letter-spacing: 0.5px;
+}
+.status-ok { background: linear-gradient(135deg, #0a3a20, #1a5a3a); border: 2px solid #00d4aa; color: #00d4aa; }
+.status-tight { background: linear-gradient(135deg, #3a3010, #4a4020); border: 2px solid #ffa500; color: #ffa500; }
+.status-short { background: linear-gradient(135deg, #3a1020, #5a1a2a); border: 2px solid #ff5555; color: #ff5555; }
+
+/* HOURLY TABLE */
+.hourly-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.hourly-table th {
+  background: #0d1b3e; padding: 8px 6px; text-align: center;
+  color: #aaa; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3px;
+  border-bottom: 2px solid #1a4a7a;
+}
+.hourly-table td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #1a2a4a; }
+.hourly-table tr:hover { background: rgba(26,42,90,0.5); }
+.hourly-table .hour-label { color: #aaa; font-weight: 600; text-align: left; }
+.hourly-table .editable {
+  background: #0f3460; border: 1px solid #1a4a7a; border-radius: 4px;
+  color: #fff; font-weight: 700; width: 44px; text-align: center; padding: 4px; font-size: 0.85rem;
+}
+.hourly-table .editable:focus { border-color: #00d4aa; outline: none; box-shadow: 0 0 6px rgba(0,212,170,0.3); }
+.hourly-table .computed { color: #00d4aa; font-weight: 700; }
+.hourly-table .cumulative { color: #ffa500; font-weight: 600; }
+.hourly-table tr.total-row { background: #0d1b3e; border-top: 2px solid #00d4aa; }
+.hourly-table tr.total-row td { font-weight: 800; color: #00d4aa; padding: 10px 6px; }
+.hourly-table tr.target-row { background: #2a1a3e; border-top: 2px solid #ffd700; }
+.hourly-table tr.target-row td { font-weight: 700; color: #ffd700; padding: 10px 6px; }
+.hourly-table tr.diff-row td { font-weight: 600; font-size: 0.75rem; }
+
+/* FLEX TRIGGERS */
+.flex-triggers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.trigger-card {
+  background: linear-gradient(135deg, #0d1b3e, #142040);
+  border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 14px;
+}
+.trigger-card h4 { font-size: 0.75rem; color: #ffa500; margin-bottom: 8px; text-transform: uppercase; }
+.trigger-card ul { list-style: none; padding: 0; }
+.trigger-card ul li { font-size: 0.75rem; color: #bbb; padding: 3px 0; padding-left: 14px; position: relative; }
+.trigger-card ul li::before { content: "▸"; position: absolute; left: 0; color: #00d4aa; }
+
+.notes {
+  margin-top: 16px; padding: 14px; background: linear-gradient(135deg, #0d1b3e, #142040);
+  border-radius: 10px; border-left: 3px solid #ffd700;
+  font-size: 0.75rem; color: #bbb; line-height: 1.6;
+}
+.how-it-works {
+  margin-top: 18px; padding: 16px; background: linear-gradient(135deg, #0d1b3e, #142040);
+  border: 1px solid rgba(255,255,255,0.05); border-radius: 12px;
+}
+.how-it-works h3 { font-size: 0.85rem; color: #5dade2; margin-bottom: 10px; text-transform: uppercase; }
+.how-it-works ol { padding-left: 18px; }
+.how-it-works li { font-size: 0.75rem; color: #bbb; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- HEADER -->
+  <div class="header">
+    <h1>PACK HC BALANCER</h1>
+    <div class="site-date">
+      <input type="text" id="siteName" value="BWU6" title="Site name">
+      <input type="number" id="currentHour" placeholder="Hr" style="background:transparent;border:none;border-bottom:1px solid #444;color:#ffa500;font-size:0.85rem;font-weight:600;width:40px;text-align:center;padding:2px 4px;" title="Current hour of shift (1-9)" oninput="updateHrsLeft()">
+      <span style="font-size:0.65rem;color:#888;">/9</span>
+      <input type="date" id="planDate">
+      <button class="btn-today" onclick="setToday()">TODAY</button>
+    </div>
+  </div>
+  <div class="subtitle">9.5 hr shift | 9 hrs active | 30 min clean/other</div>
+
+  <!-- PACK PARAMS BAR -->
+  <div class="params-section-label pack-label">PACK PARAMETERS</div>
+  <div class="params-bar pack-params">
+    <div class="param-item">
+      <div class="param-label">Singles UPH</div>
+      <input type="number" class="pack-input" id="pSinglesUPH" value="68" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Multi UPH</div>
+      <input type="number" class="pack-input" id="pMultiUPH" value="100" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Active Hrs</div>
+      <input type="number" class="pack-input" id="pActiveHrs" value="9.0" step="0.5" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Singles Cap/HC</div>
+      <div class="auto-calc" id="pSinglesCap">612</div>
+    </div>
+    <div class="param-item">
+      <div class="param-label">Multi Cap/HC</div>
+      <div class="auto-calc" id="pMultiCap">900</div>
+    </div>
+  </div>
+
+  <!-- SD PARAMS BAR -->
+  <div class="params-section-label sd-label">SHIP DOCK PARAMETERS</div>
+  <div class="params-bar sd-params">
+    <div class="param-item">
+      <div class="param-label">SD Pallet UPH</div>
+      <input type="number" class="sd-input" id="pSDUPH" value="72" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">SD Cap/HC</div>
+      <div class="auto-calc sd-auto" id="pSDCap">648</div>
+    </div>
+  </div>
+
+  <!-- PACK INPUT SECTION -->
+  <div class="section pack-section">
+    <h2 class="gold">📦 PACK — VOLUME &amp; HC INPUT</h2>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Singles Volume</label>
+        <input type="number" class="pack-field" id="singlesVol" placeholder="e.g. 2000" oninput="markFilled(this); recalc()">
+      </div>
+      <div class="input-group">
+        <label>Multi Volume</label>
+        <input type="number" class="pack-field" id="multiVol" placeholder="e.g. 1800" oninput="markFilled(this); recalc()">
+      </div>
+      <div class="input-group">
+        <label>Singles HC</label>
+        <input type="number" class="pack-field" id="singlesHC" placeholder="e.g. 5" oninput="markFilled(this); recalc()">
+      </div>
+      <div class="input-group">
+        <label>Multi HC</label>
+        <input type="number" class="pack-field" id="multiHC" placeholder="e.g. 3" oninput="markFilled(this); recalc()">
+      </div>
+    </div>
+  </div>
+
+  <!-- PACK SUMMARY -->
+  <div class="section pack-section">
+    <h2 class="green">📦 PACK — HC PLAN SUMMARY</h2>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="card-label">Singles HC Need</div>
+        <div class="card-value" id="sHCNeed">—</div>
+        <div class="card-sub" id="sHCSub"></div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Multi HC Need</div>
+        <div class="card-value" id="mHCNeed">—</div>
+        <div class="card-sub" id="mHCSub"></div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Day Target</div>
+        <div class="card-value" id="dayTarget">—</div>
+        <div class="card-sub">singles + multi</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Total HC Used</div>
+        <div class="card-value" id="totalUsed">—</div>
+        <div class="card-sub">singles + multi HC</div>
+      </div>
+      <div class="summary-card highlight">
+        <div class="card-label">Pack Capacity</div>
+        <div class="card-value green" id="packCap">—</div>
+        <div class="card-sub" id="packCapSub"></div>
+      </div>
+    </div>
+    <div id="packStatus"></div>
+  </div>
+
+  <!-- SD BALANCE CHECK -->
+  <div class="section sd-section">
+    <h2 class="purple">🚢 SHIP DOCK — BALANCE CHECK</h2>
+    <p style="font-size:0.73rem; color:#999; margin-bottom:14px;">Can Ship Dock absorb what Pack is sending? Volume auto-fills from Pack. Enter SD HC and hours left.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Singles Left in Rodeo</label>
+        <input type="number" class="sd-field filled" id="sdSinglesLeft" placeholder="e.g. 1000" readonly="" style="opacity:0.85; cursor:default;">
+      </div>
+      <div class="input-group">
+        <label>Multis Left in Rodeo</label>
+        <input type="number" class="sd-field filled" id="sdMultiLeft" placeholder="e.g. 200" readonly="" style="opacity:0.85; cursor:default;">
+      </div>
+      <div class="input-group">
+        <label>SD Line HC Available</label>
+        <input type="number" class="sd-field" id="sdHC" placeholder="e.g. 6" oninput="markFilled(this); recalcSD()">
+      </div>
+      <div class="input-group">
+        <label>Hours Left in Shift</label>
+        <input type="number" class="sd-field filled" id="sdHrsLeft" readonly="" style="opacity:0.85; cursor:default;">
+      </div>
+    </div>
+
+    <!-- SD Results -->
+    <div class="sd-compare-grid" id="sdResults" style="display:none;">
+      <div class="sd-card">
+        <div class="card-label">Total Pkgs to SD</div>
+        <div class="card-value" id="sdTotalPkgs" style="color:#fff;">—</div>
+        <div class="card-sub">singles + multis</div>
+      </div>
+      <div class="sd-card">
+        <div class="card-label">SD Capacity</div>
+        <div class="card-value" id="sdCapacity" style="color:#bb86fc;">—</div>
+        <div class="card-sub" id="sdCapSub">HC × UPH × Hrs</div>
+      </div>
+      <div class="sd-card">
+        <div class="card-label">Needed Rate/Hr</div>
+        <div class="card-value" id="packOutputHr" style="color:#ffa500;">—</div>
+        <div class="card-sub" id="packOutputSub">to clear in time</div>
+      </div>
+      <div class="sd-card">
+        <div class="card-label">SD vs Needed</div>
+        <div class="card-value" id="sdDiff" style="color:#00d4aa;">—</div>
+        <div class="card-sub" id="sdDiffSub"></div>
+      </div>
+      <div class="sd-card highlight-sd">
+        <div class="card-label">SD HC Needed</div>
+        <div class="card-value" id="sdHCNeeded" style="color:#bb86fc;">—</div>
+        <div class="card-sub" id="sdHCNeededSub">to absorb volume</div>
+      </div>
+    </div>
+
+    <!-- SD Status Banner -->
+    <div id="sdStatus" style="display:none;"></div>
+
+    <!-- SD Breakdown -->
+    <div id="sdBreakdown" style="display:none; margin-top:12px; font-size:0.75rem; color:#bbb; background:linear-gradient(135deg,#1a1040,#201548); padding:12px; border-radius:8px; line-height:1.7; border:1px solid rgba(187,134,252,0.1);"></div>
+  </div>
+
+  <!-- HOURLY BALANCER TABLE -->
+  <div class="section pack-section">
+    <h2 class="orange">📦 PACK — HOURLY HC BALANCE</h2>
+    <p style="font-size:0.75rem; color:#888; margin-bottom:12px;">Edit Singles/Multi HC per hour to flex based on WIP. Totals update live.</p>
+    <table class="hourly-table">
+      <thead>
+        <tr>
+          <th>Hour</th>
+          <th>Singles HC</th>
+          <th>Multi HC</th>
+          <th>Total HC</th>
+          <th>Singles/hr</th>
+          <th>Multi/hr</th>
+          <th>Total/hr</th>
+          <th>Cumulative</th>
+        </tr>
+      </thead>
+      <tbody id="hourlyBody"></tbody>
+    </table>
+  </div>
+
+  <!-- FLEX TRIGGERS -->
+  <div class="section pack-section">
+    <h2 class="blue">📦 PACK — FLEX TRIGGERS</h2>
+    <div class="flex-triggers">
+      <div class="trigger-card">
+        <h4>Move HC to Multi</h4>
+        <ul>
+          <li>Multi WIP &gt; 30 min of work</li>
+          <li>Singles WIP &lt; 15 min (starving)</li>
+          <li>Multi CPTs approaching</li>
+          <li>Multi backlog from upstream</li>
+        </ul>
+      </div>
+      <div class="trigger-card">
+        <h4>Move HC to Singles</h4>
+        <ul>
+          <li>Singles WIP &gt; 30 min of work</li>
+          <li>Multi WIP &lt; 15 min (drying up)</li>
+          <li>End of shift — flush singles</li>
+          <li>Singles CPTs at risk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="notes">
+      <strong>Key:</strong> Multi is 1.5x more productive per HC (100 vs 68 UPH). Each HC moved Singles→Multi = +32 units/hr.
+      Bias toward Multi when volume allows, but never starve Singles WIP.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function setToday() {
+  document.getElementById('planDate').value = new Date().toISOString().split('T')[0];
+}
+setToday();
+
+function updateHrsLeft() {
+  var p = getParams();
+  var currentHr = parseFloat(document.getElementById('currentHour').value) || 0;
+  var hrsLeft = currentHr > 0 ? Math.max(0, p.activeHrs - currentHr) : p.activeHrs;
+  document.getElementById('sdHrsLeft').value = hrsLeft > 0 ? hrsLeft : '';
+  recalcSD();
+}
+
+function markFilled(el) {
+  if (el.value !== '') el.classList.add('filled');
+  else el.classList.remove('filled');
+}
+
+function getParams() {
+  return {
+    singlesUPH: parseFloat(document.getElementById('pSinglesUPH').value) || 68,
+    multiUPH: parseFloat(document.getElementById('pMultiUPH').value) || 100,
+    activeHrs: parseFloat(document.getElementById('pActiveHrs').value) || 9,
+    sdUPH: parseFloat(document.getElementById('pSDUPH').value) || 72
+  };
+}
+
+function updateParams() {
+  var p = getParams();
+  document.getElementById('pSinglesCap').textContent = Math.round(p.singlesUPH * p.activeHrs);
+  document.getElementById('pMultiCap').textContent = Math.round(p.multiUPH * p.activeHrs);
+  document.getElementById('pSDCap').textContent = Math.round(p.sdUPH * p.activeHrs);
+  updateHrsLeft();
+  recalc();
+  recalcSD();
+}
+
+// ===== SD BALANCE CHECK =====
+function recalcSD() {
+  var p = getParams();
+  var singlesLeft = parseInt(document.getElementById('sdSinglesLeft').value) || 0;
+  var multiLeft = parseInt(document.getElementById('sdMultiLeft').value) || 0;
+  var sdHC = parseInt(document.getElementById('sdHC').value) || 0;
+  var hrsLeft = parseFloat(document.getElementById('sdHrsLeft').value) || 0;
+
+  var resultsEl = document.getElementById('sdResults');
+  var statusEl = document.getElementById('sdStatus');
+  var breakdownEl = document.getElementById('sdBreakdown');
+
+  if ((singlesLeft + multiLeft) === 0 || hrsLeft === 0) {
+    resultsEl.style.display = 'none';
+    statusEl.style.display = 'none';
+    breakdownEl.style.display = 'none';
+    return;
+  }
+
+  resultsEl.style.display = 'grid';
+  statusEl.style.display = 'block';
+  breakdownEl.style.display = 'block';
+
+  var totalPkgs = singlesLeft + multiLeft;
+  var sdCapacity = sdHC > 0 ? Math.round(sdHC * p.sdUPH * hrsLeft) : 0;
+  var packFlowPerHr = Math.round(totalPkgs / hrsLeft);
+  var sdPerHr = sdHC > 0 ? Math.round(sdHC * p.sdUPH) : 0;
+  var diff = sdCapacity - totalPkgs;
+
+  // SD HC NEEDED to absorb the volume
+  var sdHCNeeded = Math.ceil(totalPkgs / (p.sdUPH * hrsLeft));
+  var sdHCGap = sdHC > 0 ? sdHCNeeded - sdHC : 0;
+
+  document.getElementById('sdTotalPkgs').textContent = totalPkgs.toLocaleString();
+  document.getElementById('sdCapacity').textContent = sdHC > 0 ? sdCapacity.toLocaleString() : '—';
+  document.getElementById('sdCapSub').textContent = sdHC > 0 ? sdHC + ' × ' + p.sdUPH + ' × ' + hrsLeft + 'h' : 'enter SD HC';
+  document.getElementById('packOutputHr').textContent = packFlowPerHr.toLocaleString();
+  document.getElementById('packOutputSub').textContent = totalPkgs + ' ÷ ' + hrsLeft + 'h';
+
+  // SD HC Needed card
+  document.getElementById('sdHCNeeded').textContent = sdHCNeeded;
+  if (sdHC > 0) {
+    if (sdHC >= sdHCNeeded) {
+      document.getElementById('sdHCNeededSub').textContent = 'you have ' + sdHC + ' ✓';
+      document.getElementById('sdHCNeeded').style.color = '#00d4aa';
+    } else {
+      document.getElementById('sdHCNeededSub').textContent = 'need +' + sdHCGap + ' more HC';
+      document.getElementById('sdHCNeeded').style.color = '#ff5555';
+    }
+  } else {
+    document.getElementById('sdHCNeededSub').textContent = 'min to absorb volume';
+    document.getElementById('sdHCNeeded').style.color = '#bb86fc';
+  }
+
+  // SD vs Needed diff
+  var diffEl = document.getElementById('sdDiff');
+  var diffSubEl = document.getElementById('sdDiffSub');
+  if (sdHC > 0) {
+    if (diff >= 0) {
+      diffEl.textContent = '+' + diff.toLocaleString();
+      diffEl.style.color = diff > 200 ? '#00d4aa' : '#ffa500';
+      diffSubEl.textContent = 'surplus units';
+    } else {
+      diffEl.textContent = diff.toLocaleString();
+      diffEl.style.color = '#ff5555';
+      diffSubEl.textContent = 'short units';
+    }
+  } else {
+    diffEl.textContent = '—';
+    diffEl.style.color = '#bb86fc';
+    diffSubEl.textContent = 'enter SD HC';
+  }
+
+  // Status banner
+  var statusHTML = '';
+  if (sdHC > 0) {
+    if (diff > 200) {
+      statusHTML = '<div class="status-banner status-ok">✓ SD CAN ABSORB — surplus of ' + diff + ' units (' + sdHC + ' HC available, only ' + sdHCNeeded + ' needed)</div>';
+    } else if (diff >= 0) {
+      statusHTML = '<div class="status-banner status-tight">⚠ SD TIGHT — only ' + diff + ' units buffer. Need +1 more HC for comfort</div>';
+    } else {
+      statusHTML = '<div class="status-banner status-short">✗ SD SHORT — need ' + sdHCNeeded + ' HC but only have ' + sdHC + '. Need +' + sdHCGap + ' more HC to absorb!</div>';
+    }
+  } else {
+    statusHTML = '<div class="status-banner" style="background:#1a1040;border:2px solid #bb86fc;color:#bb86fc;">ℹ SD needs minimum <strong>' + sdHCNeeded + ' HC</strong> to process ' + totalPkgs.toLocaleString() + ' packages in ' + hrsLeft + 'h</div>';
+  }
+  statusEl.innerHTML = statusHTML;
+
+  // Breakdown
+  var breakdown = '<strong>🚢 SD Breakdown:</strong><br>';
+  breakdown += '• Pack Rodeo: ' + singlesLeft.toLocaleString() + ' singles + ' + multiLeft.toLocaleString() + ' multis = <strong>' + totalPkgs.toLocaleString() + ' packages</strong><br>';
+  breakdown += '• SD needs to process at: <strong>' + packFlowPerHr.toLocaleString() + '/hr</strong> to clear in ' + hrsLeft + 'h<br>';
+  breakdown += '• SD HC Needed: ' + totalPkgs + ' ÷ (' + p.sdUPH + ' × ' + hrsLeft + ') = <strong>' + sdHCNeeded + ' HC</strong><br>';
+  if (sdHC > 0) {
+    breakdown += '• SD capacity with ' + sdHC + ' HC: ' + sdHC + ' × ' + p.sdUPH + ' × ' + hrsLeft + 'h = <strong>' + sdCapacity.toLocaleString() + ' units</strong><br>';
+    var diffPerHr = sdPerHr - packFlowPerHr;
+    if (diffPerHr >= 0) {
+      breakdown += '• SD hourly rate vs needed: <span style="color:#00d4aa">+' + diffPerHr + '/hr surplus</span>';
+    } else {
+      breakdown += '• SD hourly rate vs needed: <span style="color:#ff5555">' + diffPerHr + '/hr gap</span> — SD can\'t keep up';
+    }
+  }
+  breakdownEl.innerHTML = breakdown;
+}
+
+// ===== PACK HOURLY TABLE =====
+function buildTable(sHC, mHC) {
+  var p = getParams();
+  var body = document.getElementById('hourlyBody');
+  var hrs = Math.floor(p.activeHrs);
+  var html = '';
+  var cumulative = 0;
+
+  for (var h = 1; h <= hrs; h++) {
+    var sTput = sHC * p.singlesUPH;
+    var mTput = mHC * p.multiUPH;
+    var total = sTput + mTput;
+    cumulative += total;
+
+    html += '<tr class="hour-row">' +
+      '<td class="hour-label">Hour ' + h + '</td>' +
+      '<td><input class="editable s-input" type="number" value="' + sHC + '" onchange="recalcTable()"></td>' +
+      '<td><input class="editable m-input" type="number" value="' + mHC + '" onchange="recalcTable()"></td>' +
+      '<td class="row-total-hc">' + (sHC + mHC) + '</td>' +
+      '<td class="row-s-tput">' + Math.round(sTput) + '</td>' +
+      '<td class="row-m-tput">' + Math.round(mTput) + '</td>' +
+      '<td class="computed row-total-tput">' + Math.round(total) + '</td>' +
+      '<td class="cumulative row-cum">' + cumulative.toLocaleString() + '</td>' +
+      '</tr>';
+  }
+
+  html += '<tr class="total-row"><td>PLAN OUTPUT</td><td></td><td></td><td></td><td id="totalSTput"></td><td id="totalMTput"></td><td id="totalTput"></td><td id="totalCum"></td></tr>';
+  html += '<tr class="target-row"><td>TARGET</td><td></td><td></td><td></td><td id="targetS"></td><td id="targetM"></td><td id="targetTotal"></td><td></td></tr>';
+  html += '<tr class="diff-row"><td>DIFF</td><td></td><td></td><td></td><td id="diffS"></td><td id="diffM"></td><td id="diffTotal"></td><td></td></tr>';
+
+  body.innerHTML = html;
+  recalcTable();
+}
+
+function recalcTable() {
+  var p = getParams();
+  var rows = document.querySelectorAll('#hourlyBody tr.hour-row');
+  var cumulative = 0, totalS = 0, totalM = 0;
+
+  rows.forEach(function(row) {
+    var s = parseInt(row.querySelector('.s-input').value) || 0;
+    var m = parseInt(row.querySelector('.m-input').value) || 0;
+    var sTput = s * p.singlesUPH;
+    var mTput = m * p.multiUPH;
+    var total = sTput + mTput;
+    cumulative += total;
+    totalS += sTput;
+    totalM += mTput;
+
+    row.querySelector('.row-total-hc').textContent = s + m;
+    row.querySelector('.row-s-tput').textContent = Math.round(sTput);
+    row.querySelector('.row-m-tput').textContent = Math.round(mTput);
+    row.querySelector('.row-total-tput').textContent = Math.round(total);
+    row.querySelector('.row-cum').textContent = cumulative.toLocaleString();
+  });
+
+  var el;
+  el = document.getElementById('totalSTput'); if(el) el.textContent = totalS.toLocaleString();
+  el = document.getElementById('totalMTput'); if(el) el.textContent = totalM.toLocaleString();
+  el = document.getElementById('totalTput'); if(el) el.textContent = (totalS + totalM).toLocaleString();
+  el = document.getElementById('totalCum'); if(el) el.textContent = cumulative.toLocaleString();
+
+  var singlesVol = parseInt(document.getElementById('singlesVol').value) || 0;
+  var multiVol = parseInt(document.getElementById('multiVol').value) || 0;
+  var targetTotal = singlesVol + multiVol;
+
+  el = document.getElementById('targetS'); if(el) el.textContent = singlesVol > 0 ? singlesVol.toLocaleString() : '—';
+  el = document.getElementById('targetM'); if(el) el.textContent = multiVol > 0 ? multiVol.toLocaleString() : '—';
+  el = document.getElementById('targetTotal'); if(el) el.textContent = targetTotal > 0 ? targetTotal.toLocaleString() : '—';
+
+  function formatDiff(val) {
+    var prefix = val > 0 ? '+' : '';
+    return '<span style="color:' + (val >= 0 ? '#00d4aa' : '#ff5555') + '">' + prefix + val.toLocaleString() + '</span>';
+  }
+  if (targetTotal > 0) {
+    el = document.getElementById('diffS'); if(el) el.innerHTML = singlesVol > 0 ? formatDiff(totalS - singlesVol) : '—';
+    el = document.getElementById('diffM'); if(el) el.innerHTML = multiVol > 0 ? formatDiff(totalM - multiVol) : '—';
+    el = document.getElementById('diffTotal'); if(el) el.innerHTML = formatDiff(cumulative - targetTotal);
+  }
+}
+
+// ===== MAIN RECALC =====
+function recalc() {
+  var p = getParams();
+  var singlesCap = Math.round(p.singlesUPH * p.activeHrs);
+  var multiCap = Math.round(p.multiUPH * p.activeHrs);
+
+  var singlesVol = parseInt(document.getElementById('singlesVol').value) || 0;
+  var multiVol = parseInt(document.getElementById('multiVol').value) || 0;
+  var sHC = parseInt(document.getElementById('singlesHC').value) || 0;
+  var mHC = parseInt(document.getElementById('multiHC').value) || 0;
+
+  // Auto-fill SD rodeo fields from Pack volumes
+  document.getElementById('sdSinglesLeft').value = singlesVol || '';
+  document.getElementById('sdMultiLeft').value = multiVol || '';
+
+  // HC needed (for reference)
+  var sHCNeed = singlesVol > 0 ? Math.floor(singlesVol / singlesCap) : 0;
+  var mHCNeed = multiVol > 0 ? Math.floor(multiVol / multiCap) : 0;
+  var sGap = singlesVol - (sHCNeed * singlesCap);
+  var mGap = multiVol - (mHCNeed * multiCap);
+  if ((sGap + mGap) > 0) {
+    if (singlesVol >= multiVol) sHCNeed += 1;
+    else mHCNeed += 1;
+  }
+
+  var dayTarget = singlesVol + multiVol;
+  var totalUsed = sHC + mHC;
+  var packCapacity = Math.round((sHC * singlesCap) + (mHC * multiCap));
+
+  document.getElementById('dayTarget').textContent = dayTarget > 0 ? dayTarget.toLocaleString() : '—';
+  document.getElementById('sHCNeed').textContent = singlesVol > 0 ? sHCNeed : '—';
+  document.getElementById('sHCSub').textContent = singlesVol > 0 ? singlesVol + ' ÷ ' + singlesCap : '';
+  document.getElementById('mHCNeed').textContent = multiVol > 0 ? mHCNeed : '—';
+  document.getElementById('mHCSub').textContent = multiVol > 0 ? multiVol + ' ÷ ' + multiCap : '';
+  document.getElementById('totalUsed').textContent = totalUsed > 0 ? totalUsed : '—';
+  document.getElementById('packCap').textContent = packCapacity > 0 ? packCapacity.toLocaleString() : '—';
+
+  var diff = packCapacity - dayTarget;
+  if (dayTarget > 0 && packCapacity > 0) {
+    document.getElementById('packCapSub').textContent = diff >= 0 ? '+' + diff + ' surplus' : diff + ' short';
+    document.getElementById('packCap').style.color = diff >= 0 ? '#00d4aa' : '#ff5555';
+  } else {
+    document.getElementById('packCapSub').textContent = '';
+    document.getElementById('packCap').style.color = '#00d4aa';
+  }
+
+  // Pack status
+  var packStatusEl = document.getElementById('packStatus');
+  if (dayTarget > 0 && packCapacity > 0) {
+    // How many more HC Pack needs (use singles cap as conservative estimate)
+    var packHCShort = diff < 0 ? Math.ceil(Math.abs(diff) / singlesCap) : 0;
+    var packHCForComfort = diff >= 0 && diff <= 200 ? 1 : 0;
+    if (diff > 200) {
+      packStatusEl.innerHTML = '<div class="status-banner status-ok">✓ PACK OK — capacity exceeds target by ' + diff + ' units</div>';
+    } else if (diff >= 0) {
+      packStatusEl.innerHTML = '<div class="status-banner status-tight">⚠ PACK TIGHT — only ' + diff + ' units buffer. Need +' + packHCForComfort + ' more HC for comfort</div>';
+    } else {
+      packStatusEl.innerHTML = '<div class="status-banner status-short">✗ PACK SHORT — ' + Math.abs(diff) + ' units under target. Need +' + packHCShort + ' more HC!</div>';
+    }
+  } else {
+    packStatusEl.innerHTML = '';
+  }
+
+  buildTable(sHC || 5, mHC || 3);
+  recalcSD();
+}
+
+// Init
+updateParams();
+updateHrsLeft();
+buildTable(5, 3);
+</script>
+
+
+</body></html>

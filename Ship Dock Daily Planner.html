@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #121218;
+  --color-text: #e4e4ed;
+  --color-navbar-bg: #1a1a24;
+  --color-bg-chat-view: #121218;
+  --color-bg-secondary: #1a1a24;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-hover: #2a2a38;
+  --color-surface: #1e1e2a;
+  --color-surface-hover: #2a2a38;
+  --color-surface-active: #353546;
+  --color-border: rgba(255, 255, 255, .12);
+  --color-border-light: rgba(255, 255, 255, .06);
+  --color-border-strong: #3a3a4e;
+  --color-primary: #8575ff;
+  --color-primary-dark: #4200db;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-hover-border: #4200db;
+  --color-nav-icon-active: #8575ff;
+  --color-nav-hover-border: #8575ff;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-focus-ring: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent: #8575ff;
+  --color-accent-foreground: #8575ff;
+  --color-accent-dark: #4200db;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent-inverse: #ffffff;
+  --color-link: #8575ff;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent);
+  --color-primary-bg-solid: #1a1530;
+  --color-user-bubble: #333843;
+  --color-user-bubble-text: #e4e4ed;
+  --color-text-secondary: #a0a0b4;
+  --color-text-tertiary: #8a8a9a;
+  --color-text-muted: #6e6e82;
+  --color-text-on-primary: #ffffff;
+  --color-success: #4ade80;
+  --color-success-dark: #00802f;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #1c2c22;
+  --color-success-border: #0e3d1c;
+  --color-success-foreground: #4ade80;
+  --color-success-dark-foreground: #00802f;
+  --color-success-text: #4ade80;
+  --color-error: #ff6b6b;
+  --color-error-dark: #db0000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #3b1a24;
+  --color-error-bg: #3b1a24;
+  --color-error-border: #5e1a24;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #ff6b6b;
+  --color-error-dark-foreground: #db0000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #ff6b6b;
+  --color-warning: #fbbf24;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #3d3520;
+  --color-warning-border: #5e4a1a;
+  --color-warning-foreground: #fbbf24;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #60a5fa;
+  --color-info-dark: #006ce0;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #1a2a42;
+  --color-info-border: #0f3d6e;
+  --color-info-foreground: #60a5fa;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .7);
+  --color-shadow: rgba(0, 0, 0, .3);
+  --color-hover: rgba(255, 255, 255, .05);
+  --color-tooltip-bg: rgba(30, 30, 42, .95);
+  --color-tooltip-text: #e4e4ed;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #ff6b6b;
+  --color-voice-red-dark: #db0000;
+  --color-voice-amber: #fbbf24;
+  --color-voice-purple-glow: rgba(133, 117, 255, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .3);
+  --color-success-bg-solid: #1a3d28;
+  --color-error-bg-solid: #4a2028;
+  --color-error-border-solid: #5e1a24;
+  --color-warning-bg-solid: #4a3a1e;
+  --color-warning-text: #fbbf24;
+  --color-info-bg-solid: #1a3050;
+  --color-info-bg-solid-alt: #222240;
+  --color-info-text: #60a5fa;
+  --color-info-text-alt: #818cf8;
+  --color-emerald: #34d399;
+  --color-teal: #5eead4;
+  --color-code-bg: #1e1e2a;
+  --color-code-header-bg: #252535;
+  --color-code-text: #e4e4ed;
+  --color-code-border: #2e2e3e;
+  --color-code-muted: #6e6e82;
+  --color-inline-code-bg: #1e1e2a;
+  --color-inline-code-text: #e4e4ed;
+  --color-inline-code-border: #2e2e3e;
+  --color-scrollbar-thumb: #3a3a4e;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e4e4ed;
+  --color-graph-node-text-dim: #6e6e82;
+  --color-graph-edge-default: #6e6e82;
+  --color-graph-edge-cross: #F39C12;
+  --color-graph-edge-text: #a0a0b4;
+  --color-graph-edge-stroke: #1a1a24;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #FF4444;
+  --color-graph-external-border: #6e6e82;
+  --color-graph-cat-file: #5DADE2;
+  --color-graph-cat-folder: #AAB7B8;
+  --color-graph-cat-file-aggregate: #5499C7;
+  --color-graph-cat-class: #BB8FCE;
+  --color-graph-cat-function: #58D68D;
+  --color-graph-cat-method: #48C9B0;
+  --color-graph-cat-variable: #F5B041;
+  --color-graph-cat-import: #EB984E;
+  --color-graph-cat-module: #7E8CE0;
+  --color-graph-cat-concept: #EC7063;
+  --color-graph-cat-person: #FF8A8A;
+  --color-graph-cat-org: #76D7C4;
+  --color-graph-cat-organization: #76D7C4;
+  --color-graph-cat-product: #B8B0FE;
+  --color-graph-cat-metric: #FEA0C0;
+  --color-graph-cat-location: #7E9BB5;
+  --color-graph-cat-date: #F092C0;
+  --color-graph-cat-code: #5DADE2;
+  --color-graph-cat-doc: #AAB7B8;
+  --color-graph-cat-url: #45D6B5;
+  --color-graph-cat-email: #8E7CF7;
+  --color-graph-cat-unknown: #D5DBDB;
+  --color-graph-rel-contains: #D5DBDB;
+  --color-graph-rel-extends: #BB8FCE;
+  --color-graph-rel-implements: #5DADE2;
+  --color-graph-rel-imports: #EB984E;
+  --color-graph-rel-uses: #58D68D;
+  --color-graph-rel-calls: #52BE80;
+  --color-graph-rel-references: #F5B041;
+  --color-graph-rel-related-to: #AAB7B8;
+  --color-graph-rel-works-on: #EC7063;
+  --color-graph-rel-owns: #48C9B0;
+  --color-graph-rel-depends-on: #EB984E;
+  --color-graph-rel-parent-of: #D5DBDB;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #6e6e82;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #1e1e2a;
+  --qs-tertiary-background: #1e1e2a;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BWU6 Ship Dock Daily Planner</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .site-header {
+    display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 4px;
+  }
+  .site-header input {
+    background: transparent; border: none; border-bottom: 1px dashed #555;
+    color: #fff; font-size: 1.5rem; font-weight: 700; text-align: center;
+    width: 80px; padding: 2px 4px;
+  }
+  .site-header input:focus { outline: none; border-bottom-color: #00d4aa; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #e0e0e0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { text-align: center; font-size: 1.5rem; margin-bottom: 4px; color: #fff; }
+  .subtitle { text-align: center; font-size: 0.8rem; color: #888; margin-bottom: 20px; }
+
+  .params-bar {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    background: linear-gradient(145deg, #1c2e4a, #223a55);
+    border-radius: 10px; padding: 12px 20px; margin-bottom: 20px;
+    border: 1px solid #2a4a6f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  .param-item { text-align: center; }
+  .param-label { font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+  .param-value { font-size: 1rem; font-weight: 700; color: #00d4aa; }
+
+  .section {
+    background: linear-gradient(145deg, #1c2e4a, #213552);
+    border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    border: 1px solid #2a4a6f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  .section h2 { font-size: 0.95rem; margin-bottom: 14px; }
+  .section h2.gold { color: #ffd700; }
+  .section h2.green { color: #00d4aa; }
+  .section h2.orange { color: #ffa500; }
+  .section h2.blue { color: #5dade2; }
+  .section h2.purple { color: #bb86fc; }
+
+  .input-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 12px;
+  }
+  .input-row-4 {
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; margin-bottom: 12px;
+  }
+  .input-group { display: flex; flex-direction: column; }
+  .input-group label {
+    font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .input-group input {
+    background: linear-gradient(145deg, #163d6b, #1a4578);
+    border: 2px solid #1a4a7a; border-radius: 8px;
+    padding: 10px 12px; font-size: 1.1rem; font-weight: 700; color: #fff;
+    text-align: center; transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .input-group input:focus { outline: none; border-color: #00d4aa; box-shadow: 0 0 8px rgba(0, 212, 170, 0.3); }
+  .input-group input:placeholder-shown {
+    background: linear-gradient(145deg, #1e3555, #233e60);
+    border-color: #f5a623; border-style: dashed;
+    box-shadow: 0 0 6px rgba(245, 166, 35, 0.15);
+  }
+  .input-group input::placeholder { color: #555; }
+  .input-group input[type=number]::-webkit-inner-spin-button,
+  .input-group input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  .input-group input[type=number] { -moz-appearance: textfield; }
+
+  .summary-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px;
+  }
+  .summary-grid-3 {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px;
+  }
+  .summary-card {
+    background: linear-gradient(145deg, #163d6b, #1a4578);
+    border-radius: 10px; padding: 14px; text-align: center;
+    border: 1px solid #2a5080;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .summary-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+  .summary-card.highlight { background: linear-gradient(135deg, #0f3460, #1a5a3a); border: 1px solid #00d4aa; box-shadow: 0 0 10px rgba(0, 212, 170, 0.15); }
+  .summary-card.warn { background: linear-gradient(135deg, #0f3460, #5a4a1a); border: 1px solid #ffa500; box-shadow: 0 0 10px rgba(255, 165, 0, 0.15); }
+  .summary-card.danger { background: linear-gradient(135deg, #0f3460, #5a1a1a); border: 1px solid #ff5555; box-shadow: 0 0 10px rgba(255, 85, 85, 0.15); }
+  .summary-card .card-label { font-size: 0.65rem; color: #888; text-transform: uppercase; margin-bottom: 2px; }
+  .summary-card .card-value { font-size: 1.5rem; font-weight: 800; color: #fff; }
+  .summary-card .card-value.green { color: #00d4aa; }
+  .summary-card .card-value.orange { color: #ffa500; }
+  .summary-card .card-value.red { color: #ff5555; }
+  .summary-card .card-sub { font-size: 0.65rem; color: #666; margin-top: 2px; }
+
+  .hourly-table {
+    width: 100%; border-collapse: collapse; font-size: 0.8rem;
+  }
+  .hourly-table th {
+    background: #0d1b3e; padding: 8px 6px; text-align: center;
+    color: #aaa; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.3px;
+    border-bottom: 2px solid #1a4a7a;
+  }
+  .hourly-table td {
+    padding: 8px 6px; text-align: center; border-bottom: 1px solid #1a2a4a;
+  }
+  .hourly-table tr:hover { background: rgba(0, 212, 170, 0.05); }
+  .hourly-table .hour-label { color: #aaa; font-weight: 600; text-align: left; }
+  .hourly-table .computed { color: #00d4aa; font-weight: 700; }
+  .hourly-table tr.total-row { background: linear-gradient(90deg, #0d2b3e, #0d1b3e); border-top: 2px solid #00d4aa; }
+  .hourly-table tr.total-row td { font-weight: 800; color: #00d4aa; padding: 10px 6px; }
+  .hourly-table tr.target-row { background: #2a1a3e; border-top: 2px solid #ffd700; }
+  .hourly-table tr.target-row td { font-weight: 700; color: #ffd700; padding: 10px 6px; }
+  .hourly-table tr.diff-row td { font-weight: 600; font-size: 0.75rem; }
+
+  .what-if-table {
+    width: 100%; border-collapse: collapse; font-size: 0.75rem;
+  }
+  .what-if-table th {
+    background: #0d1b3e; padding: 6px 4px; text-align: center;
+    color: #aaa; font-size: 0.65rem; text-transform: uppercase;
+    border-bottom: 2px solid #1a4a7a;
+  }
+  .what-if-table td {
+    padding: 6px 4px; text-align: center; border-bottom: 1px solid #1a2a4a;
+  }
+  .what-if-table .easy { color: #00d4aa; background: #0a2a1a; }
+  .what-if-table .tight { color: #ffa500; background: #2a2010; }
+  .what-if-table .short { color: #ff5555; background: #2a1010; }
+
+  .status-badge {
+    display: inline-block; padding: 4px 12px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 700;
+  }
+  .status-badge.ok { background: #1a3a2a; color: #00d4aa; border: 1px solid #00d4aa; }
+  .status-badge.warn { background: #3a2a1a; color: #ffa500; border: 1px solid #ffa500; }
+  .status-badge.bad { background: #3a1a1a; color: #ff5555; border: 1px solid #ff5555; }
+
+  .notes {
+    margin-top: 14px; padding: 12px; background: #0d1b3e; border-radius: 8px;
+    border-left: 3px solid #ffd700; font-size: 0.75rem; color: #bbb; line-height: 1.5;
+  }
+
+  .split-section {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="site-header">
+    <input type="text" id="siteName" value="BWU6" style="width:80px;" oninput="updateTitle()">
+    <h1 style="margin:0;">SHIP DOCK DAILY PLANNER</h1>
+  </div>
+  <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:4px;">
+    <input type="date" id="planDate" style="background:#0f3460;border:1px solid #1a4a7a;border-radius:6px;padding:4px 10px;color:#fff;font-size:0.8rem;font-weight:600;" oninput="recalc()">
+    <button onclick="setToday()" style="background:#00d4aa;border:none;border-radius:6px;padding:5px 12px;color:#1a1a2e;font-size:0.7rem;font-weight:700;cursor:pointer;">TODAY</button>
+  </div>
+  <div class="subtitle">9.5 hr shift | 9 hrs processing | 0.5 hr start-ups &amp; tidiness</div>
+
+  <div class="params-bar">
+    <div class="param-item">
+      <div class="param-label">Palletizing UPH</div>
+      <input type="number" id="paramPalletUPH" value="72" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">FL UPH</div>
+      <input type="number" id="paramFLUPH" value="100" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Prod Hrs</div>
+      <input type="number" id="paramProdHrs" value="9.0" step="0.5" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" oninput="updateParams()">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Palletizing Cap/HC</div>
+      <input type="number" id="paramPalletCap" value="648" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" readonly="">
+    </div>
+    <div class="param-item">
+      <div class="param-label">FL Cap/HC</div>
+      <input type="number" id="paramFLCap" value="900" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" readonly="">
+    </div>
+    <div class="param-item">
+      <div class="param-label">Loader UPH (30%)</div>
+      <input type="number" id="paramLoaderUPH" value="21.6" style="background:transparent;border:none;border-bottom:1px dashed #00d4aa;color:#00d4aa;font-size:1rem;font-weight:700;text-align:center;width:55px;" readonly="">
+    </div>
+  </div>
+
+  <!-- INPUT SECTION -->
+  <div class="section">
+    <h2 class="gold">DAILY INPUTS</h2>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Daily Target (pkgs)</label>
+        <input type="number" id="dailyTarget" placeholder="e.g. 5000" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>Multi-Item Packages</label>
+        <input type="number" id="multis" placeholder="e.g. 500" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>Fluid Load Units</label>
+        <input type="number" id="fluidUnits" placeholder="e.g. 400" oninput="recalc()">
+      </div>
+    </div>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Line HC</label>
+        <input type="number" id="palletHC" placeholder="e.g. 6" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>Fluid HC</label>
+        <input type="number" id="flHC" placeholder="e.g. 1" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>Loaders</label>
+        <input type="number" id="loaders" placeholder="e.g. 1" oninput="recalc()">
+      </div>
+    </div>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Avg Items per Multi</label>
+        <input type="number" id="itemsPerMulti" value="2.5" step="0.1" oninput="recalc()">
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARNING CURVE SECTION -->
+  <div class="section">
+    <h2 class="blue">LEARNING CURVE AAs (Optional)</h2>
+    <p style="font-size:0.75rem; color:#888; margin-bottom:12px;">If you have LC AAs on shift, enter count per stage. Output calculated at expected LC rate.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>LC1 (30 UPH)</label>
+        <input type="number" id="lc1" placeholder="e.g. 1" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>LC2 (36 UPH)</label>
+        <input type="number" id="lc2" placeholder="e.g. 1" oninput="recalc()">
+      </div>
+      <div class="input-group">
+        <label>LC3 (42 UPH)</label>
+        <input type="number" id="lc3" placeholder="e.g. 1" oninput="recalc()">
+      </div>
+    </div>
+    <div style="font-size:0.75rem; color:#aaa;" id="lcSummary"></div>
+  </div>
+
+  <!-- RESULTS SUMMARY -->
+  <div class="section">
+    <h2 class="green">RESULTS</h2>
+    <div class="summary-grid" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="summary-card">
+        <div class="card-label">Pallet Volume</div>
+        <div class="card-value" id="palletVol">—</div>
+        <div class="card-sub">after FL &amp; multi adj</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Pallet Capacity</div>
+        <div class="card-value" id="palletCap">—</div>
+        <div class="card-sub" id="palletCapSub"></div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">FL Capacity</div>
+        <div class="card-value" id="flCap">—</div>
+        <div class="card-sub" id="flCapSub"></div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Pallet Absorbs FL</div>
+        <div class="card-value" id="palletAbsorbsFL">—</div>
+        <div class="card-sub" id="palletAbsorbsFLSub"></div>
+      </div>
+      <div class="summary-card highlight" id="statusCard">
+        <div class="card-label">Shift Status</div>
+        <div class="card-value green" id="shiftStatus">—</div>
+        <div class="card-sub" id="statusSub"></div>
+      </div>
+    </div>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="card-label">Day Target</div>
+        <div class="card-value" id="dayTarget">—</div>
+        <div class="card-sub">total packages</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Min Pallet HC</div>
+        <div class="card-value" id="minPalletHC">—</div>
+        <div class="card-sub">needed for volume</div>
+      </div>
+      <div class="summary-card">
+        <div class="card-label">Total HC</div>
+        <div class="card-value" id="totalHC">—</div>
+        <div class="card-sub">pallet + FL</div>
+      </div>
+      <div class="summary-card" id="surplusCard">
+        <div class="card-label">Pallet Surplus/Deficit</div>
+        <div class="card-value" id="palletDiff">—</div>
+        <div class="card-sub">vs volume</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOURLY PACING TABLE -->
+  <div class="section">
+    <h2 class="orange">HOURLY THROUGHPUT PROJECTION</h2>
+    <p style="font-size:0.75rem; color:#888; margin-bottom:12px;">Projected output per hour based on current staffing and rate configuration.</p>
+    <table class="hourly-table">
+      <thead>
+        <tr>
+          <th>Hour</th>
+          <th>Pallet HC</th>
+          <th>Output/hr</th>
+          <th>Cumulative</th>
+          <th>Per Person</th>
+          <th>% of Target</th>
+        </tr>
+      </thead>
+      <tbody id="hourlyBody"></tbody>
+    </table>
+  </div>
+
+  <!-- WHAT-IF SECTION -->
+  <div class="section">
+    <h2 class="purple">WHAT-IF: PALLET TARGET vs HC</h2>
+    <p style="font-size:0.75rem; color:#888; margin-bottom:12px;">Can your pallet team handle this target? (adjusted for multis &amp; fluid from your inputs)</p>
+    <table class="what-if-table" id="whatIfTable"></table>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section">
+    <h2 class="blue">HOW IT WORKS</h2>
+    <div class="notes">
+      <strong>1.</strong> Multis reduce effective volume: 500 multis @ 2.5 items/box = 1250 items packed in 500 boxes, saving 750 from target.<br>
+      <strong>2.</strong> Fluid units handled by FL team (100 UPH, 9 productive hrs).<br>
+      <strong>3.</strong> Pallet team handles remaining volume at 72 UPH with 0.5hr for start-ups &amp; tidiness (9 productive hrs).<br>
+      <strong>4.</strong> Pallet capacity per HC = 72 UPH x 9 hrs = 648 pkgs/shift.<br>
+      <strong>5.</strong> FL capacity per HC = 100 UPH x 9 hrs = 900 units/shift.<br>
+      <strong>6.</strong> Loaders have 30% capacity to help palletize = 21.6 UPH x 9 hrs = 194 units/shift per loader (only when target &lt; 5,500).<br>
+      <strong>7.</strong> If pallet team has surplus, those spare hours flex to fluid at FL UPH.<br>
+      <strong>8.</strong> If Fluid HC has spare capacity (fluid units &lt; FL capacity), free hours go to lines at Palletizing UPH. E.g. 1 FL HC with 400 units (cap 900) = 500 surplus ÷ 100 = 5 hrs free x 72 = 360 extra line units.
+    </div>
+  </div>
+</div>
+
+<script>
+
+function getParams() {
+  var pUPH = parseFloat(document.getElementById('paramPalletUPH').value) || 72;
+  var fUPH = parseFloat(document.getElementById('paramFLUPH').value) || 100;
+  var prodHrs = parseFloat(document.getElementById('paramProdHrs').value) || 9.0;
+  return {
+    palletUPH: pUPH,
+    flUPH: fUPH,
+    prodHrs: prodHrs,
+    palletCapPerHC: pUPH * prodHrs,
+    flCapPerHC: fUPH * prodHrs,
+    loaderPalletUPH: pUPH * 0.3,
+    loaderCapPerShift: (pUPH * 0.3) * prodHrs
+  };
+}
+
+function updateParams() {
+  var p = getParams();
+  document.getElementById('paramPalletCap').value = Math.round(p.palletCapPerHC);
+  document.getElementById('paramFLCap').value = Math.round(p.flCapPerHC);
+  document.getElementById('paramLoaderUPH').value = p.loaderPalletUPH.toFixed(1);
+  recalc();
+}
+
+function updateTitle() {
+  var site = document.getElementById('siteName').value || '';
+  document.title = (site ? site + ' ' : '') + 'Ship Dock Daily Planner';
+}
+
+function setToday() {
+  var today = new Date();
+  var yyyy = today.getFullYear();
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var dd = String(today.getDate()).padStart(2, '0');
+  document.getElementById('planDate').value = yyyy + '-' + mm + '-' + dd;
+}
+
+function recalc() {
+  var p = getParams();
+
+  var target = parseInt(document.getElementById('dailyTarget').value) || 0;
+  var pHC = parseInt(document.getElementById('palletHC').value) || 0;
+  var fHC = parseInt(document.getElementById('flHC').value) || 0;
+  var fluidUnits = parseInt(document.getElementById('fluidUnits').value) || 0;
+  var multis = parseInt(document.getElementById('multis').value) || 0;
+  var itemsPerMulti = parseFloat(document.getElementById('itemsPerMulti').value) || 2.5;
+  var loaders = parseInt(document.getElementById('loaders').value) || 0;
+
+  // Learning Curve AAs
+  var lc1 = parseInt(document.getElementById('lc1').value) || 0;
+  var lc2 = parseInt(document.getElementById('lc2').value) || 0;
+  var lc3 = parseInt(document.getElementById('lc3').value) || 0;
+  var lcTotalAAs = lc1 + lc2 + lc3;
+  var lcOutput = Math.round((lc1 * 30 + lc2 * 36 + lc3 * 42) * p.prodHrs);
+  var lcHourly = Math.round(lc1 * 30 + lc2 * 36 + lc3 * 42);
+
+  // LC Summary
+  document.getElementById('lcSummary').innerHTML = lcTotalAAs > 0 ?
+    'LC AAs: ' + lcTotalAAs + ' | Shift output: ' + lcOutput.toLocaleString() + ' units | Hourly: ' + lcHourly + '/hr (vs ' + (lcTotalAAs * 60) + '/hr if veteran @ 60 UPH)' : '';
+
+  // Calculations
+  var estBoxesFromMultis = Math.round(multis / itemsPerMulti);
+  var multiSaving = multis - estBoxesFromMultis;
+  var effectiveVolume = target - multiSaving;
+  if (effectiveVolume < 0) effectiveVolume = 0;
+
+  // Loader contribution — only applies when daily target < 7000
+  var loaderContribution = 0;
+  if (target > 0 && target < 5500) {
+    loaderContribution = Math.round(loaders * p.loaderCapPerShift);
+  }
+  // Pallet capacity = Line HC (at veteran UPH) + LC AAs (at their rates) + loaders
+  var palletCapacity = (pHC * p.palletCapPerHC) + lcOutput + loaderContribution;
+
+  // Pallet volume is effective volume minus what FL HC covers
+  var flCapacity = fHC * p.flCapPerHC;
+  var flCoveredByFL = Math.min(fluidUnits, flCapacity);
+  var flRemaining = fluidUnits - flCoveredByFL;
+
+  // Fluid HC spare capacity → helps on lines at Palletizing UPH
+  // If fluid units < FL capacity, FL person has free hours to palletize
+  var flHelpOnLine = 0;
+  if (fHC > 0 && flCapacity > fluidUnits) {
+    var flSurplusUnits = flCapacity - fluidUnits;
+    // Convert FL surplus into hours free: surplus / FL UPH
+    var flFreeHours = flSurplusUnits / p.flUPH;
+    // Those hours on lines at palletizing UPH
+    flHelpOnLine = Math.round(flFreeHours * p.palletUPH);
+  }
+  palletCapacity += flHelpOnLine;
+
+  // Pallet volume = effective volume - FL covered units + remaining FL that pallet must absorb
+  var palletVolume = effectiveVolume - flCoveredByFL;
+  // But pallet also needs to cover remaining FL units not handled by dedicated FL HC
+  // Actually: pallet handles (target - multi saving - FL covered by dedicated FL HC)
+  // And if pallet has surplus, it can absorb fluid at 100 UPH
+
+  // Step 1: Pallet volume (without fluid) = target - multi saving - all fluid units
+  var palletVolumeBase = target - multiSaving - fluidUnits;
+  if (palletVolumeBase < 0) palletVolumeBase = 0;
+
+  // Step 2: Pallet surplus (in units at 72 UPH)
+  var palletSurplus = palletCapacity - palletVolumeBase;
+
+  // Step 3: Convert pallet surplus hours into FL capacity at 100 UPH
+  // Surplus units at 72 UPH = surplus/72 hours available
+  // Those hours at 100 UPH (fluid work) = (surplus/72) * 100 fluid units absorbed
+  var palletAbsorbsFL = 0;
+  if (palletSurplus > 0 && fluidUnits > 0) {
+    var surplusHours = palletSurplus / p.palletUPH;
+    palletAbsorbsFL = Math.round(surplusHours * p.flUPH);
+    palletAbsorbsFL = Math.min(palletAbsorbsFL, fluidUnits); // can't absorb more than fluid exists
+  }
+
+  // Step 4: Total FL coverage = dedicated FL + pallet absorption
+  var totalFLCoverage = flCapacity + palletAbsorbsFL;
+  var flStatus = totalFLCoverage >= fluidUnits;
+
+  // Effective pallet diff (considering pallet also absorbs some FL)
+  var palletDiff = palletSurplus;
+  if (palletAbsorbsFL > 0) {
+    // Pallet used some surplus for FL, reduce effective surplus
+    var hoursUsedForFL = palletAbsorbsFL / p.flUPH;
+    var palletUnitsLost = Math.round(hoursUsedForFL * p.palletUPH);
+    palletDiff = palletSurplus - palletUnitsLost;
+  }
+
+  var minPalletHC = palletVolumeBase > 0 ? Math.ceil((palletVolumeBase - lcOutput) / p.palletCapPerHC) : 0;
+  if (minPalletHC < 0) minPalletHC = 0;
+  var totalHC = pHC + fHC + loaders + lcTotalAAs;
+
+  // Update summary cards
+  document.getElementById('dayTarget').textContent = target > 0 ? target.toLocaleString() : '\u2014';
+  document.getElementById('palletVol').textContent = palletVolumeBase > 0 ? palletVolumeBase.toLocaleString() : '\u2014';
+  document.getElementById('palletCap').textContent = palletCapacity > 0 ? palletCapacity.toLocaleString() : '\u2014';
+  if (pHC > 0 || lcTotalAAs > 0) {
+    var capSub = pHC + 'x' + Math.round(p.palletCapPerHC);
+    if (lcOutput > 0) { capSub += ' + LC ' + lcOutput; }
+    if (loaderContribution > 0) { capSub += ' + ' + loaders + 'x' + Math.round(p.loaderCapPerShift); }
+    else if (loaders > 0 && target >= 5500) { capSub += ' (loaders busy >5.5k)'; }
+    if (flHelpOnLine > 0) { capSub += ' + FL ' + flHelpOnLine; }
+    document.getElementById('palletCapSub').textContent = capSub;
+  } else { document.getElementById('palletCapSub').textContent = ''; }
+  document.getElementById('flCap').textContent = flCapacity > 0 ? flCapacity.toLocaleString() : '\u2014';
+  document.getElementById('flCapSub').textContent = fHC > 0 ? fHC + ' HC x ' + Math.round(p.flCapPerHC) : '';
+  document.getElementById('minPalletHC').textContent = minPalletHC > 0 ? minPalletHC : '\u2014';
+  document.getElementById('totalHC').textContent = totalHC > 0 ? totalHC : '\u2014';
+
+  // Pallet absorbs FL
+  if (palletAbsorbsFL > 0) {
+    document.getElementById('palletAbsorbsFL').textContent = palletAbsorbsFL;
+    document.getElementById('palletAbsorbsFL').style.color = '#00d4aa';
+    document.getElementById('palletAbsorbsFLSub').textContent = 'of ' + fluidUnits + ' fluid units';
+  } else if (fluidUnits > 0 && palletSurplus <= 0) {
+    document.getElementById('palletAbsorbsFL').textContent = '0';
+    document.getElementById('palletAbsorbsFL').style.color = '#ff5555';
+    document.getElementById('palletAbsorbsFLSub').textContent = 'no surplus to flex';
+  } else {
+    document.getElementById('palletAbsorbsFL').textContent = '\u2014';
+    document.getElementById('palletAbsorbsFLSub').textContent = '';
+  }
+
+  // Pallet surplus/deficit
+  var statusCard = document.getElementById('statusCard');
+  var surplusCard = document.getElementById('surplusCard');
+  if (target > 0 && pHC > 0) {
+    document.getElementById('palletDiff').textContent = (palletDiff >= 0 ? '+' : '') + palletDiff.toLocaleString();
+    document.getElementById('palletDiff').style.color = palletDiff >= 0 ? '#00d4aa' : '#ff5555';
+    surplusCard.className = palletDiff >= 0 ? 'summary-card highlight' : 'summary-card danger';
+
+    var palletOk = palletSurplus >= 0;
+    var flOk = totalFLCoverage >= fluidUnits;
+    if (palletOk && flOk) {
+      document.getElementById('shiftStatus').textContent = 'OK';
+      document.getElementById('shiftStatus').style.color = '#00d4aa';
+      document.getElementById('statusSub').textContent = palletAbsorbsFL > 0 ? 'pallet covers FL too' : 'HC covers volume';
+      statusCard.className = 'summary-card highlight';
+    } else if (!palletOk) {
+      document.getElementById('shiftStatus').textContent = 'SHORT';
+      document.getElementById('shiftStatus').style.color = '#ff5555';
+      document.getElementById('statusSub').textContent = 'need more pallet HC';
+      statusCard.className = 'summary-card danger';
+    } else {
+      document.getElementById('shiftStatus').textContent = 'FL SHORT';
+      document.getElementById('shiftStatus').style.color = '#ffa500';
+      document.getElementById('statusSub').textContent = 'need more FL HC';
+      statusCard.className = 'summary-card warn';
+    }
+  } else {
+    document.getElementById('palletDiff').textContent = '\u2014';
+    document.getElementById('shiftStatus').textContent = '\u2014';
+    document.getElementById('statusSub').textContent = '';
+    statusCard.className = 'summary-card highlight';
+    surplusCard.className = 'summary-card';
+  }
+
+  // Hourly pacing table
+  buildHourlyTable(pHC, palletVolumeBase, loaders, target, flHelpOnLine, lcHourly);
+
+  // What-if table
+  buildWhatIf(multis, itemsPerMulti, fluidUnits, loaders);
+}
+
+function buildHourlyTable(pHC, palletVolume, loaders, target, flHelpOnLine, lcHourly) {
+  if (!loaders) loaders = 0;
+  if (!target) target = 0;
+  if (!flHelpOnLine) flHelpOnLine = 0;
+  if (!lcHourly) lcHourly = 0;
+  var p = getParams();
+  var body = document.getElementById('hourlyBody');
+  var html = '';
+  var cumulative = 0;
+  var prodHrs = p.prodHrs;
+  // Loaders only help when target < 5500
+  var loaderHourly = (target > 0 && target < 5500) ? Math.round(loaders * p.loaderPalletUPH) : 0;
+  // FL help spread across productive hours
+  var flHourly = Math.round(flHelpOnLine / prodHrs);
+  var hourlyOutput = (pHC * p.palletUPH) + loaderHourly + flHourly + lcHourly;
+  // Per person pacing = what each pallet HC person needs to achieve to hit pallet volume target
+  var perPersonPacing = (pHC > 0 && palletVolume > 0) ? ((palletVolume - (loaderHourly * prodHrs) - flHelpOnLine - (lcHourly * prodHrs)) / pHC / prodHrs).toFixed(1) : 0;
+  if (perPersonPacing < 0) perPersonPacing = 0;
+
+  for (var h = 1; h <= prodHrs; h++) {
+    cumulative += hourlyOutput;
+    var perPerson = perPersonPacing;
+    var pctTarget = palletVolume > 0 ? Math.round((cumulative / palletVolume) * 100) : 0;
+
+    html += '<tr class="hour-row">' +
+      '<td class="hour-label">Hour ' + h + '</td>' +
+      '<td>' + pHC + '</td>' +
+      '<td class="computed">' + (hourlyOutput > 0 ? hourlyOutput : '\u2014') + '</td>' +
+      '<td>' + (cumulative > 0 ? cumulative.toLocaleString() : '\u2014') + '</td>' +
+      '<td>' + (perPerson > 0 ? perPerson + '/hr' : '\u2014') + '</td>' +
+      '<td>' + (pctTarget > 0 ? pctTarget + '%' : '\u2014') + '</td>' +
+      '</tr>';
+  }
+
+  // Total row
+  html += '<tr class="total-row">' +
+    '<td>TOTAL OUTPUT</td><td></td><td>' + (hourlyOutput > 0 ? hourlyOutput + '/hr' : '') + '</td>' +
+    '<td>' + (cumulative > 0 ? cumulative.toLocaleString() : '\u2014') + '</td><td></td><td></td></tr>';
+
+  // Target row
+  html += '<tr class="target-row">' +
+    '<td>TARGET</td><td></td><td></td>' +
+    '<td>' + (palletVolume > 0 ? palletVolume.toLocaleString() : '\u2014') + '</td><td></td><td></td></tr>';
+
+  // Diff row
+  var diff = cumulative - palletVolume;
+  var diffColor = diff >= 0 ? '#00d4aa' : '#ff5555';
+  var diffPrefix = diff >= 0 ? '+' : '';
+  html += '<tr class="diff-row">' +
+    '<td>DIFF</td><td></td><td></td>' +
+    '<td><span style="color:' + diffColor + '">' + (palletVolume > 0 ? diffPrefix + diff.toLocaleString() : '\u2014') + '</span></td><td></td><td></td></tr>';
+
+  body.innerHTML = html;
+}
+
+function buildWhatIf(multis, itemsPerMulti, fluidUnits, loaders) {
+  if (!multis) multis = 0;
+  if (!itemsPerMulti) itemsPerMulti = 2.5;
+  if (!fluidUnits) fluidUnits = 0;
+  if (!loaders) loaders = 0;
+
+  var p = getParams();
+  var table = document.getElementById('whatIfTable');
+  var hcRange = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+  var targets = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000];
+
+  // Multi saving and fluid adjustment (same logic as recalc)
+  var estBoxesFromMultis = Math.round(multis / itemsPerMulti);
+  var multiSaving = multis - estBoxesFromMultis;
+
+  var html = '<thead><tr><th>Target</th>';
+  for (var i = 0; i < hcRange.length; i++) {
+    html += '<th>' + hcRange[i] + ' HC</th>';
+  }
+  html += '</tr></thead><tbody>';
+
+  for (var t = 0; t < targets.length; t++) {
+    var rawTarget = targets[t];
+    // Calculate actual pallet volume for this target (same formula as main calc)
+    var palletVol = rawTarget - multiSaving - fluidUnits;
+    if (palletVol < 0) palletVol = 0;
+
+    html += '<tr><td style="font-weight:700; color:#fff;">' + rawTarget.toLocaleString() + '</td>';
+    for (var h = 0; h < hcRange.length; h++) {
+      var hc = hcRange[h];
+      // Loader contribution only when target < 5500
+      var loaderHelp = (rawTarget < 5500) ? Math.round(loaders * p.loaderCapPerShift) : 0;
+      var capacity = (hc * p.palletCapPerHC) + loaderHelp;
+      var surplus = capacity - palletVol;
+      var cls, label;
+      if (surplus > 500) { cls = 'easy'; label = 'Easy'; }
+      else if (surplus >= 0) { cls = 'tight'; label = 'Tight'; }
+      else { cls = 'short'; label = 'Short'; }
+      html += '<td class="' + cls + '">' + label + '</td>';
+    }
+    html += '</tr>';
+  }
+  html += '</tbody>';
+  table.innerHTML = html;
+}
+
+// Init
+setToday();
+buildWhatIf(0, 2.5, 0, 0);
+buildHourlyTable(0, 0);
+</script>
+
+</body></html>

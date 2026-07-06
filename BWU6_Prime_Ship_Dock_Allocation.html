@@ -523,6 +523,14 @@ body {
 .flex-person input:focus { outline: 1px solid #f97316; border-radius: 3px; }
 .flex-person .fp-role { font-size: 0.5rem; color: #666; }
 
+
+.remove-btn {
+  position: absolute; top: -4px; right: -4px;
+  background: #dc2626; color: #fff; border-radius: 50%;
+  width: 14px; height: 14px; font-size: 10px; line-height: 14px;
+  text-align: center; cursor: pointer; display: none; font-weight: 700;
+}
+.person-chip:hover .remove-btn { display: block; }
 /* Legend */
 .legend { display: flex; gap: 10px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap; }
 .legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.6rem; }
@@ -746,8 +754,8 @@ function buildFloor(day, di) {
   h += '<div class="floor-title">' + day.title + ' — Ship Dock Floor</div>';
 
   // Role bar
-  var pC = 0; Object.values(day.lines).forEach(function(a){pC+=a.length;});
-  var total = pC + day.waterSpiders.length + 3 + day.flex.length; // 3 loaders + flex
+  var pC = 0; Object.values(day.lines).forEach(function(a){a.forEach(function(p){if(p.name && p.name!=='New' && p.name.trim()!=='') pC++;});});
+  var wsC = 0; day.waterSpiders.forEach(function(w){if(w.name&&w.name.trim()!=='') wsC++;}); var flxC = 0; day.flex.forEach(function(f){if(f.name&&f.name!=='New'&&f.name.trim()!=='') flxC++;}); var total = pC + wsC + 3 + flxC;
   h += '<div class="role-bar">';
   h += '<div class="role-count">Total HC <span class="rc-num">' + total + '</span></div>';
   h += '<div class="role-count">Pallets <span class="rc-num">' + pC + '</span></div>';
@@ -780,9 +788,10 @@ function buildFloor(day, di) {
       h += '<div style="font-size:0.55rem;color:#444;padding:16px 0;">—</div>';
     }
     people.forEach(function(p, pi) {
-      h += '<div class="person-chip ' + getRoleClass(p.role) + '">';
+      h += '<div class="person-chip ' + getRoleClass(p.role) + '" style="position:relative;">';
       h += '<input value="' + p.name + '" onchange="updateLine(' + di + ',' + l + ',' + pi + ',this.value)">';
       h += '<div class="p-role">' + p.role + '</div>';
+      h += '<span class="remove-btn" onclick="removeLine(' + di + ',' + l + ',' + pi + ')">&times;</span>';
       h += '</div>';
     });
     h += '<button class="add-btn" onclick="addToLine(' + di + ',' + l + ')">+</button>';
@@ -818,9 +827,10 @@ function buildFloor(day, di) {
     h += '<div style="font-size:0.55rem;color:#444;padding:8px 0;">— none —</div>';
   }
   day.flex.forEach(function(p, pi) {
-    h += '<div class="flex-person">';
+    h += '<div class="flex-person" style="position:relative;">';
     h += '<input value="' + p.name + '" onchange="updateFlex(' + di + ',' + pi + ',this.value)">';
     h += '<div class="fp-role">' + (p.role || 'Flex') + '</div>';
+    h += '<span class="remove-btn" onclick="removeFlex(' + di + ',' + pi + ')" style="display:inline-block;position:absolute;top:-3px;right:-3px;">&times;</span>';
     h += '</div>';
   });
   h += '<button class="add-btn" onclick="addFlex(' + di + ')" style="margin-top:6px;">+ Add</button>';
@@ -849,7 +859,9 @@ function updateWS(di, wi, val) { DAYS[di].waterSpiders[wi].name = val; save(); }
 function updateLoader(di, dd, val) { DAYS[di].loaders[dd].name = val; save(); }
 function updateFL(di, val) { DAYS[di].fl.name = val; save(); }
 function updateFlex(di, pi, val) { DAYS[di].flex[pi].name = val; save(); }
+function removeLine(di, line, pi) { DAYS[di].lines[String(line)].splice(pi, 1); save(); buildAll(); switchDay(di); }
 function addToLine(di, line) { DAYS[di].lines[String(line)].push({name:'New',role:'Pallets'}); save(); buildAll(); switchDay(di); }
+function removeFlex(di, pi) { DAYS[di].flex.splice(pi, 1); save(); buildAll(); switchDay(di); }
 function addFlex(di) { DAYS[di].flex.push({name:'New',role:'Flex'}); save(); buildAll(); switchDay(di); }
 
 function buildAll() {

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #121218;
+  --color-text: #e4e4ed;
+  --color-navbar-bg: #1a1a24;
+  --color-bg-chat-view: #121218;
+  --color-bg-secondary: #1a1a24;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-hover: #2a2a38;
+  --color-surface: #1e1e2a;
+  --color-surface-hover: #2a2a38;
+  --color-surface-active: #353546;
+  --color-border: rgba(255, 255, 255, .12);
+  --color-border-light: rgba(255, 255, 255, .06);
+  --color-border-strong: #3a3a4e;
+  --color-primary: #8575ff;
+  --color-primary-dark: #4200db;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-hover-border: #4200db;
+  --color-nav-icon-active: #8575ff;
+  --color-nav-hover-border: #8575ff;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-focus-ring: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent: #8575ff;
+  --color-accent-foreground: #8575ff;
+  --color-accent-dark: #4200db;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent-inverse: #ffffff;
+  --color-link: #8575ff;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent);
+  --color-primary-bg-solid: #1a1530;
+  --color-user-bubble: #333843;
+  --color-user-bubble-text: #e4e4ed;
+  --color-text-secondary: #a0a0b4;
+  --color-text-tertiary: #8a8a9a;
+  --color-text-muted: #6e6e82;
+  --color-text-on-primary: #ffffff;
+  --color-success: #4ade80;
+  --color-success-dark: #00802f;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #1c2c22;
+  --color-success-border: #0e3d1c;
+  --color-success-foreground: #4ade80;
+  --color-success-dark-foreground: #00802f;
+  --color-success-text: #4ade80;
+  --color-error: #ff6b6b;
+  --color-error-dark: #db0000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #3b1a24;
+  --color-error-bg: #3b1a24;
+  --color-error-border: #5e1a24;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #ff6b6b;
+  --color-error-dark-foreground: #db0000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #ff6b6b;
+  --color-warning: #fbbf24;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #3d3520;
+  --color-warning-border: #5e4a1a;
+  --color-warning-foreground: #fbbf24;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #60a5fa;
+  --color-info-dark: #006ce0;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #1a2a42;
+  --color-info-border: #0f3d6e;
+  --color-info-foreground: #60a5fa;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .7);
+  --color-shadow: rgba(0, 0, 0, .3);
+  --color-hover: rgba(255, 255, 255, .05);
+  --color-tooltip-bg: rgba(30, 30, 42, .95);
+  --color-tooltip-text: #e4e4ed;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #ff6b6b;
+  --color-voice-red-dark: #db0000;
+  --color-voice-amber: #fbbf24;
+  --color-voice-purple-glow: rgba(133, 117, 255, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .3);
+  --color-success-bg-solid: #1a3d28;
+  --color-error-bg-solid: #4a2028;
+  --color-error-border-solid: #5e1a24;
+  --color-warning-bg-solid: #4a3a1e;
+  --color-warning-text: #fbbf24;
+  --color-info-bg-solid: #1a3050;
+  --color-info-bg-solid-alt: #222240;
+  --color-info-text: #60a5fa;
+  --color-info-text-alt: #818cf8;
+  --color-emerald: #34d399;
+  --color-teal: #5eead4;
+  --color-code-bg: #1e1e2a;
+  --color-code-header-bg: #252535;
+  --color-code-text: #e4e4ed;
+  --color-code-border: #2e2e3e;
+  --color-code-muted: #6e6e82;
+  --color-inline-code-bg: #1e1e2a;
+  --color-inline-code-text: #e4e4ed;
+  --color-inline-code-border: #2e2e3e;
+  --color-scrollbar-thumb: #3a3a4e;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e4e4ed;
+  --color-graph-node-text-dim: #6e6e82;
+  --color-graph-edge-default: #6e6e82;
+  --color-graph-edge-cross: #F39C12;
+  --color-graph-edge-text: #a0a0b4;
+  --color-graph-edge-stroke: #1a1a24;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #FF4444;
+  --color-graph-external-border: #6e6e82;
+  --color-graph-cat-file: #5DADE2;
+  --color-graph-cat-folder: #AAB7B8;
+  --color-graph-cat-file-aggregate: #5499C7;
+  --color-graph-cat-class: #BB8FCE;
+  --color-graph-cat-function: #58D68D;
+  --color-graph-cat-method: #48C9B0;
+  --color-graph-cat-variable: #F5B041;
+  --color-graph-cat-import: #EB984E;
+  --color-graph-cat-module: #7E8CE0;
+  --color-graph-cat-concept: #EC7063;
+  --color-graph-cat-person: #FF8A8A;
+  --color-graph-cat-org: #76D7C4;
+  --color-graph-cat-organization: #76D7C4;
+  --color-graph-cat-product: #B8B0FE;
+  --color-graph-cat-metric: #FEA0C0;
+  --color-graph-cat-location: #7E9BB5;
+  --color-graph-cat-date: #F092C0;
+  --color-graph-cat-code: #5DADE2;
+  --color-graph-cat-doc: #AAB7B8;
+  --color-graph-cat-url: #45D6B5;
+  --color-graph-cat-email: #8E7CF7;
+  --color-graph-cat-unknown: #D5DBDB;
+  --color-graph-rel-contains: #D5DBDB;
+  --color-graph-rel-extends: #BB8FCE;
+  --color-graph-rel-implements: #5DADE2;
+  --color-graph-rel-imports: #EB984E;
+  --color-graph-rel-uses: #58D68D;
+  --color-graph-rel-calls: #52BE80;
+  --color-graph-rel-references: #F5B041;
+  --color-graph-rel-related-to: #AAB7B8;
+  --color-graph-rel-works-on: #EC7063;
+  --color-graph-rel-owns: #48C9B0;
+  --color-graph-rel-depends-on: #EB984E;
+  --color-graph-rel-parent-of: #D5DBDB;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #6e6e82;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #1e1e2a;
+  --qs-tertiary-background: #1e1e2a;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BWU6 Ship Dock — Prime Allocation</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0a0e1a;
+  color: #e4e4ed;
+  padding: 12px;
+}
+.header { text-align: center; margin-bottom: 4px; }
+.header h1 { font-size: 1.1rem; font-weight: 700; color: #f97316; }
+.sub-header { font-size: 0.65rem; color: #666; margin-bottom: 12px; text-align: center; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 14px; justify-content: center; }
+.tab {
+  padding: 7px 18px; border-radius: 8px 8px 0 0; cursor: pointer;
+  font-size: 0.78rem; font-weight: 600; background: #1a1a2e; color: #888;
+  border: 1px solid #333; border-bottom: none; transition: all 0.2s;
+}
+.tab.active { background: #1e1e2e; color: #f97316; border-color: #f97316; }
+.tab:hover { color: #f97316; }
+
+.day-panel { display: none; }
+.day-panel.active { display: block; }
+
+.floor-container {
+  background: #10131f;
+  border: 2px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.floor-title {
+  font-size: 0.75rem; color: #888; text-align: center;
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* Main layout: Lines area + Flex/FL side panel */
+.floor-main {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 10px;
+}
+
+.lines-area { }
+
+/* WS row at front */
+.ws-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px; margin-bottom: 6px;
+}
+.ws-zone {
+  background: #0f1e3a; border: 1px dashed #3b82f6; border-radius: 6px;
+  padding: 5px; text-align: center;
+}
+.ws-zone .ws-label { font-size: 0.55rem; color: #3b82f6; text-transform: uppercase; }
+.ws-zone input {
+  background: transparent; border: none; color: #60a5fa;
+  font-size: 0.65rem; font-weight: 600; text-align: center; width: 100%;
+}
+.ws-zone input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+
+/* Lines grid */
+.floor-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+.line-col {
+  background: #111827;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+.line-header {
+  font-size: 0.72rem; font-weight: 700; color: #f97316;
+  padding: 4px; border-bottom: 2px solid #f97316; margin-bottom: 6px;
+}
+.line-people {
+  flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 2px 0;
+}
+
+/* Loader at front of lines 4,5,6 — RED/CRIMSON color */
+.loader-front {
+  background: #2a0f0f;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  padding: 6px 4px;
+  margin-top: auto;
+  text-align: center;
+}
+.loader-front .loader-label {
+  font-size: 0.62rem; color: #f87171; font-weight: 700; margin-bottom: 2px;
+}
+.loader-front input.loader-name {
+  background: #1a0808; border: 1px solid #dc2626; border-radius: 4px;
+  color: #fca5a5; font-size: 0.65rem; padding: 3px 4px; margin-top: 2px;
+  width: 100%; text-align: center; font-weight: 600;
+}
+.loader-front input.loader-name:focus { border-color: #f97316; outline: none; }
+.loader-front .loader-sublabel { font-size: 0.5rem; color: #666; }
+
+/* DD boxes in loader zone */
+.dd-tag {
+  font-size: 0.5rem; color: #a78bfa; background: #1a1035;
+  border-radius: 4px; padding: 1px 4px; display: inline-block; margin-top: 2px;
+}
+
+/* Person chip */
+.person-chip {
+  background: #1a2332; border: 1px solid #2a4a6a; border-radius: 6px;
+  padding: 4px; text-align: center;
+}
+.person-chip input {
+  background: transparent; border: none; color: #e4e4ed;
+  font-size: 0.65rem; font-weight: 600; text-align: center; width: 100%;
+  padding: 1px 2px;
+}
+.person-chip input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+.person-chip .p-role { font-size: 0.52rem; color: #888; margin-top: 1px; }
+.person-chip.role-pallet { border-color: #4ade80; }
+.person-chip.role-pallet input { color: #4ade80; }
+.person-chip.role-ws { border-color: #60a5fa; }
+.person-chip.role-ws input { color: #60a5fa; }
+.person-chip.role-fl { border-color: #fbbf24; }
+.person-chip.role-fl input { color: #fbbf24; }
+.person-chip.role-loader { border-color: #dc2626; }
+.person-chip.role-loader input { color: #fca5a5; }
+.person-chip.role-pg { border-color: #f472b6; }
+.person-chip.role-pg input { color: #f472b6; }
+.person-chip.role-pick { border-color: #a78bfa; }
+.person-chip.role-pick input { color: #a78bfa; }
+
+/* Right side panel: FL + Flex */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.flex-box {
+  background: #0f1a2a;
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  flex: 1;
+}
+.flex-box .flex-label { font-size: 0.62rem; color: #818cf8; font-weight: 700; margin-bottom: 6px; }
+.flex-person {
+  background: #1a1035; border: 1px solid #6366f1; border-radius: 6px;
+  padding: 4px; margin-bottom: 4px; text-align: center;
+}
+.flex-person input {
+  background: transparent; border: none; color: #c4b5fd;
+  font-size: 0.63rem; font-weight: 600; text-align: center; width: 100%;
+}
+.flex-person input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+.flex-person .fp-role { font-size: 0.5rem; color: #666; }
+
+/* Legend */
+.legend { display: flex; gap: 10px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.6rem; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* Role counts */
+.role-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 10px; }
+.role-count { background: #1a1a2e; border: 1px solid #333; border-radius: 16px; padding: 3px 10px; font-size: 0.63rem; }
+.role-count .rc-num { font-weight: 700; color: #f97316; }
+
+/* Tips */
+.tips-section { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a3e; margin-top: 16px; }
+.tips-section h3 { font-size: 0.8rem; color: #f97316; margin-bottom: 8px; }
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tip-card { background: #0a0e1a; border: 1px solid #333; border-radius: 8px; padding: 10px; }
+.tip-card h4 { font-size: 0.7rem; color: #60a5fa; margin-bottom: 5px; }
+.tip-card li { font-size: 0.62rem; color: #bbb; padding: 2px 0; list-style: none; }
+.tip-card li::before { content: "▸ "; color: #f97316; }
+
+.footer-credit { text-align: center; margin-top: 20px; padding: 10px; font-size: 0.65rem; color: #444; border-top: 1px solid #1a1a2e; }
+.footer-credit span { color: #f97316; font-weight: 600; }
+
+button.add-btn {
+  background: #f97316; color: #000; border: none; border-radius: 5px;
+  padding: 4px 8px; font-size: 0.6rem; cursor: pointer; font-weight: 600; margin-top: 4px;
+}
+button.add-btn:hover { background: #fb923c; }
+</style>
+</head>
+<body>
+
+<div class="header"><h1>🚢 BWU6 SHIP DOCK — PRIME ALLOCATION</h1></div>
+<div class="sub-header">Visual Floor Plan | Lines 1-6 | Loaders at DD | Editable Names</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#4ade80;"></div>Pallets</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#60a5fa;"></div>Water Spider</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f87171;"></div>Loader</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f472b6;"></div>PG</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#818cf8;"></div>Flex</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchDay(0)">8 Jul</div>
+  <div class="tab" onclick="switchDay(1)">9 Jul</div>
+  <div class="tab" onclick="switchDay(2)">10 Jul</div>
+  <div class="tab" onclick="switchDay(3)">11 Jul</div>
+</div>
+
+<div id="dayPanels"></div>
+
+<div style="background:#2a0f0f;border:3px solid #dc2626;border-radius:12px;padding:16px;margin-bottom:16px;text-align:center;">
+  <div style="font-size:1.4rem;font-weight:900;color:#fca5a5;">⚠️ SAFETY FIRST ⚠️</div>
+  <div style="font-size:0.78rem;color:#fca5a5;margin-top:8px;line-height:1.6;">Work hard. Have fun. <strong>Go home safe.</strong><br>Every task can wait — your wellbeing cannot. Speak up, slow down, and protect yourself and your team.</div>
+</div>
+
+<div class="tips-section">
+  <h3>📦 Pallet Building &amp; Loading Tips</h3>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h4>Building Pallets</h4>
+      <ul>
+        <li>Max height: 6ft / 180cm — no exceptions</li>
+        <li>Heavy boxes on BOTTOM, light on TOP</li>
+        <li>Interlock boxes — alternate direction each layer</li>
+        <li>Build pallets NOT staging — keep out of walkways</li>
+        <li>Wrap: 5 wraps at base, 3 in middle, 3 at top</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>Loading &amp; Staging</h4>
+      <ul>
+        <li>Load based on CPT — earliest CPT loads first</li>
+        <li>Stage based on CPT — prioritise urgent departures</li>
+        <li>Keep dock clear at all times</li>
+        <li>If trucks late or TDR team late — let PA know immediately</li>
+        <li>Label all 4 sides — sort code visible from every angle</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>Water Spider</h4>
+      <ul>
+        <li>Supply pallet team — wrap, labels, carts</li>
+        <li>Move completed pallets to staging promptly</li>
+        <li>Balance WIP between paired lines</li>
+        <li>Flag PG if one line imbalanced</li>
+        <li>Ask team: need HC? Need pallet? Need pallet removed?</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>PG Checklist</h4>
+      <ul>
+        <li>Walk lines every 30 min — balance HC to volume</li>
+        <li>Track CPTs — know urgent departures</li>
+        <li>Escalate if vol &gt; 95% capacity</li>
+        <li>Brief at start: target, trucks, priority lanes</li>
+        <li>End: flush rodeo, confirm all trucks closed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer-credit">Designed by <span>Mahdi Alizada</span></div>
+
+<script>
+var DAYS = [
+  {
+    title: '8 July 2026',
+    lines: {
+      '1': [{name:'Merani Upoko', role:'Pallets'}],
+      '2': [{name:'Brayth Slevin', role:'Pallets'}],
+      '3': [{name:'Abdul Rehan', role:'Pallets'}, {name:'Janvi Darji', role:'Pallets'}],
+      '4': [{name:'Inderjit Kaur', role:'Pallets'}, {name:'Baki Durmusoglu', role:'Pallets'}],
+      '5': [{name:'Mary Soricho', role:'Pallets'}],
+      '6': [{name:'Crystal Noble', role:'Pallets'}, {name:'Rhynne Teoh', role:'Pallets'}]
+    },
+    waterSpiders: [
+      {name:'Wa Hung Tam', zone:'1 & 2'},
+      {name:'Adil Soni', zone:'3 & 4'},
+      {name:'Preston', zone:'5 & 6'}
+    ],
+    loaders: {
+      'DD205': {name:'Jordan Dosanjh', dd:'DD205', sublabel:''},
+      'DD204': {name:'Faizan Khan', dd:'DD204', role:'PG'},
+      'DD203': {name:'Andrew', dd:'DD203', sublabel:''}
+    },
+    fl: {name:'Nanies'},
+    flex: [{name:'Luis', role:'Pick'}, {name:'Sam', role:'Pick'}]
+  },
+  {
+    title: '9 July 2026',
+    lines: {
+      '1': [{name:'Mary Soricho', role:'Pallets'}, {name:'Baki Durmusoglu', role:'Pallets'}],
+      '2': [{name:'Rayan Riazifar', role:'Pallets'}],
+      '3': [{name:'Merani Upoko', role:'Pallets'}, {name:'MD Nafis Khan', role:'Pallets'}],
+      '4': [{name:'Shantel Keegel', role:'Pallets'}],
+      '5': [{name:'Abdul Rehan', role:'Pallets'}, {name:'Janvi Darji', role:'Pallets'}],
+      '6': [{name:'Crystal Noble', role:'Pallets'}]
+    },
+    waterSpiders: [
+      {name:'Shyam Ramalingam', zone:'1 & 2'},
+      {name:'Sajal Ghimire', zone:'3 & 4'},
+      {name:'Brayth Slevin', zone:'5 & 6'}
+    ],
+    loaders: {
+      'DD205': {name:'Aidan Dosanjh', dd:'DD205', sublabel:''},
+      'DD204': {name:'Andrew Borg', dd:'DD204'},
+      'DD203': {name:'Faizan Khan', dd:'DD203', sublabel:'', role:'PG'}
+    },
+    fl: {name:'Seruwaia T.'},
+    flex: []
+  },
+  {
+    title: '10 July 2026',
+    lines: {
+      '1': [{name:'Inderjit Kaur', role:'Pallets'}, {name:'Brayth Slevin', role:'Pallets'}, {name:'MD Nafis Khan', role:'Pallets'}],
+      '2': [],
+      '3': [{name:'Adil Soni', role:'Pallets'}, {name:'Baki Durmusoglu', role:'Pallets'}, {name:'Jayden Hua', role:'Pallets'}],
+      '4': [{name:'Mary Soricho', role:'Pallets'}],
+      '5': [{name:'Rayan Riazifar', role:'Pallets'}, {name:'Gopal Jyani', role:'Pallets'}],
+      '6': [{name:'Merani Upoko', role:'Pallets'}]
+    },
+    waterSpiders: [
+      {name:'Shantel Keegel', zone:'1 & 2'},
+      {name:'Crystal Noble', zone:'3 & 4'},
+      {name:'Adhel Lual', zone:'5 & 6'}
+    ],
+    loaders: {
+      'DD205': {name:'Faizan Khan', dd:'DD205', sublabel:'', role:'PG'},
+      'DD204': {name:'Seruwaia T.', dd:'DD204'},
+      'DD203': {name:'Wathanese', dd:'DD203', sublabel:''}
+    },
+    fl: {name:'Sajal Ghimire'},
+    flex: []
+  },
+  {
+    title: '11 July 2026',
+    lines: {
+      '1': [{name:'Shyam Ramalingam', role:'Pallets'}],
+      '2': [{name:'Duy Nguyen', role:'Pallets'}, {name:'Baki Durmusoglu', role:'Pallets'}],
+      '3': [{name:'Abdul Rehan', role:'Pallets'}, {name:'Rhynne Teoh', role:'Pallets'}],
+      '4': [{name:'Watthanes', role:'Pallets'}],
+      '5': [{name:'Crystal Noble', role:'Pallets'}, {name:'Rayan Riazifar', role:'Pallets'}],
+      '6': [{name:'Shantel Keegel', role:'Pallets'}]
+    },
+    waterSpiders: [
+      {name:'Adhel Lual', zone:'1 & 2'},
+      {name:'Usman Ghaznawi', zone:'3 & 4'},
+      {name:'Sajal Ghimire', zone:'5 & 6'}
+    ],
+    loaders: {
+      'DD205': {name:'Jordan Dosanjh', dd:'DD205', sublabel:''},
+      'DD204': {name:'Aidan Dosanjh', dd:'DD204'},
+      'DD203': {name:'Faizan Khan', dd:'DD203', sublabel:'', role:'PG'}
+    },
+    fl: {name:'Seruwaia T.'},
+    flex: []
+  }
+];
+
+function getRoleClass(role) {
+  var r = (role||'').toLowerCase();
+  if (r === 'pallets') return 'role-pallet';
+  if (r === 'water spider' || r === 'ws') return 'role-ws';
+  if (r === 'fl') return 'role-fl';
+  if (r === 'loader') return 'role-loader';
+  if (r === 'pg') return 'role-pg';
+  if (r === 'pick' || r === 'flex') return 'role-pick';
+  return '';
+}
+
+function save() {
+  try { localStorage.setItem('bwu6_prime_alloc_v3', JSON.stringify(DAYS)); } catch(e) {}
+}
+
+function buildFloor(day, di) {
+  var h = '';
+  h += '<div class="day-panel ' + (di === 0 ? 'active' : '') + '" id="day_' + di + '">';
+  h += '<div class="floor-container">';
+  h += '<div class="floor-title">' + day.title + ' — Ship Dock Floor</div>';
+
+  // Role bar
+  var pC = 0; Object.values(day.lines).forEach(function(a){pC+=a.length;});
+  var total = pC + day.waterSpiders.length + 3 + day.flex.length; // 3 loaders + flex
+  h += '<div class="role-bar">';
+  h += '<div class="role-count">Total HC <span class="rc-num">' + total + '</span></div>';
+  h += '<div class="role-count">Pallets <span class="rc-num">' + pC + '</span></div>';
+  h += '<div class="role-count">W/S <span class="rc-num">' + day.waterSpiders.length + '</span></div>';
+  h += '</div>';
+
+  h += '<div class="floor-main">';
+
+  // === LEFT: Lines area ===
+  h += '<div class="lines-area">';
+
+  // Water Spiders at FRONT
+  h += '<div class="ws-row">';
+  day.waterSpiders.forEach(function(ws, wi) {
+    h += '<div class="ws-zone">';
+    h += '<div class="ws-label">🕷️ W/S — Lines ' + ws.zone + '</div>';
+    h += '<input value="' + ws.name + '" onchange="updateWS(' + di + ',' + wi + ',this.value)">';
+    h += '</div>';
+  });
+  h += '</div>';
+
+  // Lines 1-6 with Loaders at front of 4,5,6
+  h += '<div class="floor-grid">';
+  for (var l = 1; l <= 6; l++) {
+    h += '<div class="line-col">';
+    h += '<div class="line-header">LINE ' + l + '</div>';
+    h += '<div class="line-people">';
+    var people = day.lines[String(l)] || [];
+    if (people.length === 0) {
+      h += '<div style="font-size:0.55rem;color:#444;padding:16px 0;">—</div>';
+    }
+    people.forEach(function(p, pi) {
+      h += '<div class="person-chip ' + getRoleClass(p.role) + '">';
+      h += '<input value="' + p.name + '" onchange="updateLine(' + di + ',' + l + ',' + pi + ',this.value)">';
+      h += '<div class="p-role">' + p.role + '</div>';
+      h += '</div>';
+    });
+    h += '<button class="add-btn" onclick="addToLine(' + di + ',' + l + ')">+</button>';
+    h += '</div>'; // line-people
+
+    // Loaders at front of lines 4, 5, 6
+    if (l === 4 && day.loaders['DD205']) {
+      h += buildLoaderFront(di, 'DD205', day.loaders['DD205']);
+    } else if (l === 5 && day.loaders['DD204']) {
+      h += buildLoaderFront(di, 'DD204', day.loaders['DD204']);
+    } else if (l === 6 && day.loaders['DD203']) {
+      h += buildLoaderFront(di, 'DD203', day.loaders['DD203']);
+    }
+
+    h += '</div>'; // line-col
+  }
+  h += '</div>'; // floor-grid
+  h += '</div>'; // lines-area
+
+  // === RIGHT: FL + Flex side panel ===
+  h += '<div class="side-panel">';
+
+
+
+  // Flex box
+  h += '<div class="flex-box">';
+  h += '<div class="flex-label">🔄 FLEX / PICK</div>';
+  if (day.flex.length === 0) {
+    h += '<div style="font-size:0.55rem;color:#444;padding:8px 0;">— none —</div>';
+  }
+  day.flex.forEach(function(p, pi) {
+    h += '<div class="flex-person">';
+    h += '<input value="' + p.name + '" onchange="updateFlex(' + di + ',' + pi + ',this.value)">';
+    h += '<div class="fp-role">' + (p.role || 'Flex') + '</div>';
+    h += '</div>';
+  });
+  h += '<button class="add-btn" onclick="addFlex(' + di + ')" style="margin-top:6px;">+ Add</button>';
+  h += '</div>';
+
+  h += '</div>'; // side-panel
+
+  h += '</div>'; // floor-main
+  h += '</div></div>'; // floor-container, day-panel
+  return h;
+}
+
+function buildLoaderFront(di, dd, data) {
+  var h = '<div class="loader-front">';
+  h += '<div class="loader-label">🚛 LOADER</div>';
+  if (data.sublabel) h += '<div class="loader-sublabel">' + data.sublabel + '</div>';
+  h += '<span class="dd-tag">' + dd + '</span>';
+  h += '<input class="loader-name" value="' + data.name + '" onchange="updateLoader(' + di + ',\'' + dd + '\',this.value)">';
+  if (data.role) h += '<div class="loader-sublabel">' + data.role + '</div>';
+  h += '</div>';
+  return h;
+}
+
+function updateLine(di, line, pi, val) { DAYS[di].lines[String(line)][pi].name = val; save(); }
+function updateWS(di, wi, val) { DAYS[di].waterSpiders[wi].name = val; save(); }
+function updateLoader(di, dd, val) { DAYS[di].loaders[dd].name = val; save(); }
+function updateFlex(di, pi, val) { DAYS[di].flex[pi].name = val; save(); }
+function addToLine(di, line) { DAYS[di].lines[String(line)].push({name:'New',role:'Pallets'}); save(); buildAll(); switchDay(di); }
+function addFlex(di) { DAYS[di].flex.push({name:'New',role:'Flex'}); save(); buildAll(); switchDay(di); }
+
+function buildAll() {
+  var container = document.getElementById('dayPanels');
+  var h = '';
+  DAYS.forEach(function(day, i) { h += buildFloor(day, i); });
+  container.innerHTML = h;
+}
+
+function switchDay(idx) {
+  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', i===idx); });
+  document.querySelectorAll('.day-panel').forEach(function(p,i){ p.classList.toggle('active', i===idx); });
+}
+
+// Load saved
+try { var s = localStorage.getItem('bwu6_prime_alloc_v3'); if(s) DAYS = JSON.parse(s); } catch(e) {}
+buildAll();
+</script>
+
+
+</body></html>

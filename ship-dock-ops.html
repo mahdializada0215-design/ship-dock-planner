@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #121218;
+  --color-text: #e4e4ed;
+  --color-navbar-bg: #1a1a24;
+  --color-bg-chat-view: #121218;
+  --color-bg-secondary: #1a1a24;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-hover: #2a2a38;
+  --color-surface: #1e1e2a;
+  --color-surface-hover: #2a2a38;
+  --color-surface-active: #353546;
+  --color-border: rgba(255, 255, 255, .12);
+  --color-border-light: rgba(255, 255, 255, .06);
+  --color-border-strong: #3a3a4e;
+  --color-primary: #8575ff;
+  --color-primary-dark: #4200db;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-hover-border: #4200db;
+  --color-nav-icon-active: #8575ff;
+  --color-nav-hover-border: #8575ff;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-focus-ring: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent: #8575ff;
+  --color-accent-foreground: #8575ff;
+  --color-accent-dark: #4200db;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent-inverse: #ffffff;
+  --color-link: #8575ff;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent);
+  --color-primary-bg-solid: #1a1530;
+  --color-user-bubble: #333843;
+  --color-user-bubble-text: #e4e4ed;
+  --color-text-secondary: #a0a0b4;
+  --color-text-tertiary: #8a8a9a;
+  --color-text-muted: #6e6e82;
+  --color-text-on-primary: #ffffff;
+  --color-success: #4ade80;
+  --color-success-dark: #00802f;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #1c2c22;
+  --color-success-border: #0e3d1c;
+  --color-success-foreground: #4ade80;
+  --color-success-dark-foreground: #00802f;
+  --color-success-text: #4ade80;
+  --color-error: #ff6b6b;
+  --color-error-dark: #db0000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #3b1a24;
+  --color-error-bg: #3b1a24;
+  --color-error-border: #5e1a24;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #ff6b6b;
+  --color-error-dark-foreground: #db0000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #ff6b6b;
+  --color-warning: #fbbf24;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #3d3520;
+  --color-warning-border: #5e4a1a;
+  --color-warning-foreground: #fbbf24;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #60a5fa;
+  --color-info-dark: #006ce0;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #1a2a42;
+  --color-info-border: #0f3d6e;
+  --color-info-foreground: #60a5fa;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .7);
+  --color-shadow: rgba(0, 0, 0, .3);
+  --color-hover: rgba(255, 255, 255, .05);
+  --color-tooltip-bg: rgba(30, 30, 42, .95);
+  --color-tooltip-text: #e4e4ed;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #ff6b6b;
+  --color-voice-red-dark: #db0000;
+  --color-voice-amber: #fbbf24;
+  --color-voice-purple-glow: rgba(133, 117, 255, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .3);
+  --color-success-bg-solid: #1a3d28;
+  --color-error-bg-solid: #4a2028;
+  --color-error-border-solid: #5e1a24;
+  --color-warning-bg-solid: #4a3a1e;
+  --color-warning-text: #fbbf24;
+  --color-info-bg-solid: #1a3050;
+  --color-info-bg-solid-alt: #222240;
+  --color-info-text: #60a5fa;
+  --color-info-text-alt: #818cf8;
+  --color-emerald: #34d399;
+  --color-teal: #5eead4;
+  --color-code-bg: #1e1e2a;
+  --color-code-header-bg: #252535;
+  --color-code-text: #e4e4ed;
+  --color-code-border: #2e2e3e;
+  --color-code-muted: #6e6e82;
+  --color-inline-code-bg: #1e1e2a;
+  --color-inline-code-text: #e4e4ed;
+  --color-inline-code-border: #2e2e3e;
+  --color-scrollbar-thumb: #3a3a4e;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e4e4ed;
+  --color-graph-node-text-dim: #6e6e82;
+  --color-graph-edge-default: #6e6e82;
+  --color-graph-edge-cross: #F39C12;
+  --color-graph-edge-text: #a0a0b4;
+  --color-graph-edge-stroke: #1a1a24;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #FF4444;
+  --color-graph-external-border: #6e6e82;
+  --color-graph-cat-file: #5DADE2;
+  --color-graph-cat-folder: #AAB7B8;
+  --color-graph-cat-file-aggregate: #5499C7;
+  --color-graph-cat-class: #BB8FCE;
+  --color-graph-cat-function: #58D68D;
+  --color-graph-cat-method: #48C9B0;
+  --color-graph-cat-variable: #F5B041;
+  --color-graph-cat-import: #EB984E;
+  --color-graph-cat-module: #7E8CE0;
+  --color-graph-cat-concept: #EC7063;
+  --color-graph-cat-person: #FF8A8A;
+  --color-graph-cat-org: #76D7C4;
+  --color-graph-cat-organization: #76D7C4;
+  --color-graph-cat-product: #B8B0FE;
+  --color-graph-cat-metric: #FEA0C0;
+  --color-graph-cat-location: #7E9BB5;
+  --color-graph-cat-date: #F092C0;
+  --color-graph-cat-code: #5DADE2;
+  --color-graph-cat-doc: #AAB7B8;
+  --color-graph-cat-url: #45D6B5;
+  --color-graph-cat-email: #8E7CF7;
+  --color-graph-cat-unknown: #D5DBDB;
+  --color-graph-rel-contains: #D5DBDB;
+  --color-graph-rel-extends: #BB8FCE;
+  --color-graph-rel-implements: #5DADE2;
+  --color-graph-rel-imports: #EB984E;
+  --color-graph-rel-uses: #58D68D;
+  --color-graph-rel-calls: #52BE80;
+  --color-graph-rel-references: #F5B041;
+  --color-graph-rel-related-to: #AAB7B8;
+  --color-graph-rel-works-on: #EC7063;
+  --color-graph-rel-owns: #48C9B0;
+  --color-graph-rel-depends-on: #EB984E;
+  --color-graph-rel-parent-of: #D5DBDB;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #6e6e82;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #1e1e2a;
+  --qs-tertiary-background: #1e1e2a;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BWU6 Ship Dock — Prime Allocation</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0a0e1a;
+  color: #e4e4ed;
+  padding: 12px;
+}
+.header { text-align: center; margin-bottom: 4px; }
+.header h1 { font-size: 1.1rem; font-weight: 700; color: #f97316; }
+.header h1 .site-name {
+  cursor: pointer; border-bottom: 1px dashed #f97316;
+}
+.header h1 .site-name:hover { background: rgba(249,115,22,0.1); border-radius: 3px; }
+.site-input {
+  background: #0a0e1a; border: 1px solid #f97316; border-radius: 4px;
+  color: #f97316; font-size: 1.1rem; font-weight: 700; text-align: center;
+  width: 80px; padding: 2px 6px;
+}
+.sub-header { font-size: 0.65rem; color: #666; margin-bottom: 12px; text-align: center; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 14px; justify-content: center; }
+.tab {
+  padding: 7px 18px; border-radius: 8px 8px 0 0; cursor: pointer;
+  font-size: 0.78rem; font-weight: 600; background: #1a1a2e; color: #888;
+  border: 1px solid #333; border-bottom: none; transition: all 0.2s;
+}
+.tab.active { background: #1e1e2e; color: #f97316; border-color: #f97316; }
+.tab:hover { color: #f97316; }
+.tab:hover .tab-remove { display: inline-block !important; }
+.tab .tab-label { cursor: pointer; }
+.tab .tab-label:hover { text-decoration: underline; }
+.tab-input {
+  background: transparent; border: 1px solid #f97316; border-radius: 3px;
+  color: #f97316; font-size: 0.78rem; font-weight: 600; text-align: center;
+  width: 55px; padding: 2px 4px;
+}
+
+.date-bar { display: flex; gap: 10px; justify-content: center; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.date-bar input[type="date"] {
+  background: #1a1a2e; border: 1px solid #333; border-radius: 6px;
+  color: #e4e4ed; font-size: 0.7rem; padding: 5px 10px; cursor: pointer;
+}
+.date-bar input[type="date"]:focus { border-color: #f97316; outline: none; }
+.date-bar .target-group { display: flex; align-items: center; gap: 5px; }
+.date-bar .target-label { font-size: 0.62rem; color: #888; }
+.date-bar input.target-input {
+  background: #1a1a2e; border: 1px solid #333; border-radius: 6px;
+  color: #4ade80; font-size: 0.72rem; font-weight: 700; padding: 5px 8px;
+  width: 70px; text-align: center;
+}
+.date-bar input.target-input:focus { border-color: #f97316; outline: none; }
+.date-bar .target-unit { font-size: 0.55rem; color: #666; }
+.today-btn {
+  background: #f97316; color: #000; border: none; border-radius: 6px;
+  padding: 5px 12px; font-size: 0.68rem; font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.today-btn:hover { background: #fb923c; }
+
+/* Profile system */
+.profile-modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+}
+.profile-modal-box {
+  background: #1a1a2e; border: 2px solid #f97316; border-radius: 16px;
+  padding: 30px; text-align: center; max-width: 350px; width: 90%;
+}
+.profile-modal-box h2 { color: #f97316; font-size: 1rem; margin-bottom: 12px; }
+.profile-modal-box p { color: #888; font-size: 0.7rem; margin-bottom: 16px; }
+.profile-modal-box input {
+  background: #0a0e1a; border: 1px solid #333; border-radius: 8px;
+  color: #e4e4ed; font-size: 0.85rem; padding: 10px 14px; width: 100%;
+  text-align: center; margin-bottom: 12px;
+}
+.profile-modal-box input:focus { border-color: #f97316; outline: none; }
+.profile-modal-box button {
+  background: #f97316; color: #000; border: none; border-radius: 8px;
+  padding: 8px 24px; font-size: 0.75rem; font-weight: 700; cursor: pointer;
+}
+.profile-modal-box button:hover { background: #fb923c; }
+.profile-modal-box .existing-profiles { margin-top: 14px; }
+.profile-modal-box .existing-profiles span {
+  display: inline-block; background: #0f1a2a; border: 1px solid #6366f1;
+  border-radius: 6px; padding: 4px 10px; margin: 3px; cursor: pointer;
+  color: #c4b5fd; font-size: 0.65rem; font-weight: 600;
+}
+.profile-modal-box .existing-profiles span:hover { background: #1a1035; border-color: #f97316; color: #f97316; }
+.profile-badge {
+  display: inline-block; background: #1a1035; border: 1px solid #6366f1;
+  border-radius: 12px; padding: 3px 10px; font-size: 0.6rem; color: #c4b5fd;
+  cursor: pointer; margin-left: 8px;
+}
+.profile-badge:hover { border-color: #f97316; color: #f97316; }
+
+.day-panel { display: none; }
+.day-panel.active { display: block; }
+
+.floor-container {
+  background: #10131f;
+  border: 2px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.floor-title {
+  font-size: 0.75rem; color: #888; text-align: center;
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* Main layout: Lines area + Flex/FL side panel */
+.floor-main {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 10px;
+}
+
+.lines-area { }
+
+/* WS row at front */
+.ws-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px; margin-bottom: 6px;
+}
+.ws-zone {
+  background: #0f1e3a; border: 1px dashed #3b82f6; border-radius: 6px;
+  padding: 5px; text-align: center;
+}
+.ws-zone .ws-label { font-size: 0.55rem; color: #3b82f6; text-transform: uppercase; }
+.ws-zone input {
+  background: transparent; border: none; color: #60a5fa !important;
+  font-size: 0.65rem; font-weight: 600; text-align: center; width: 100%;
+}
+.ws-zone input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+
+/* Lines grid */
+.floor-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+.line-col {
+  background: #111827;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+.line-header {
+  font-size: 0.72rem; font-weight: 700; color: #f97316;
+  padding: 4px; border-bottom: 2px solid #f97316; margin-bottom: 6px;
+}
+.line-people {
+  flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 2px 0;
+}
+
+/* Loader at front of lines 4,5,6 — RED/CRIMSON color */
+.loader-front {
+  background: #1a0a2e;
+  border: 2px solid #e11d48;
+  border-radius: 8px;
+  padding: 6px 4px;
+  margin-top: auto;
+  text-align: center;
+}
+.loader-front .loader-label {
+  font-size: 0.65rem; color: #fb7185; font-weight: 800; margin-bottom: 2px;
+  font-family: 'Arial Black', 'Segoe UI', sans-serif; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.loader-front input.loader-name {
+  background: #0d0514; border: 1px solid #e11d48 !important; border-radius: 4px;
+  color: #fda4af !important; font-size: 0.68rem; padding: 4px 4px; margin-top: 2px;
+  width: 100%; text-align: center; font-weight: 800; font-family: 'Arial Black', 'Segoe UI', sans-serif;
+}
+.loader-front input.loader-name:focus { border-color: #f97316; outline: none; }
+.loader-front .loader-sublabel { font-size: 0.5rem; color: #666; }
+
+/* DD boxes in loader zone */
+.dd-tag {
+  font-size: 0.5rem; color: #a78bfa; background: #1a1035;
+  border-radius: 4px; padding: 1px 4px; display: inline-block; margin-top: 2px;
+}
+
+/* Person chip */
+.person-chip {
+  background: #1a2332; border: 1px solid #2a4a6a; border-radius: 6px;
+  padding: 4px; text-align: center;
+}
+.person-chip input {
+  background: transparent; border: none; color: #e4e4ed;
+  font-size: 0.65rem; font-weight: 600; text-align: center; width: 100%;
+  padding: 1px 2px;
+}
+.person-chip input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+.person-chip .p-role { font-size: 0.52rem; color: #888; margin-top: 1px; }
+.person-chip.role-pallet { border-color: #4ade80 !important; }
+.person-chip.role-pallet input { color: #4ade80 !important; }
+.person-chip.role-ws { border-color: #60a5fa !important; }
+.person-chip.role-ws input { color: #60a5fa !important; }
+.person-chip.role-fl { border-color: #fbbf24 !important; }
+.person-chip.role-fl input { color: #fbbf24 !important; }
+.person-chip.role-loader { border-color: #dc2626 !important; }
+.person-chip.role-loader input { color: #fca5a5 !important; }
+.person-chip.role-pg { border-color: #f472b6 !important; }
+.person-chip.role-pg input { color: #f472b6 !important; }
+.person-chip.role-pick { border-color: #a78bfa !important; }
+.person-chip.role-pick input { color: #a78bfa !important; }
+
+
+.fl-box {
+  background: #1a1508;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-align: center;
+}
+.fl-box .fl-label { font-size: 0.65rem; color: #fbbf24; font-weight: 700; margin-bottom: 4px; }
+.fl-box input {
+  background: #0d0d1a; border: 1px solid #fbbf24 !important; border-radius: 4px;
+  color: #fbbf24 !important; font-size: 0.68rem; padding: 4px; width: 100%;
+  text-align: center; font-weight: 600;
+}
+.fl-box input:focus { border-color: #f97316; outline: none; }
+/* Right side panel: FL + Flex */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.flex-box {
+  background: #0f1a2a;
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  flex: 1;
+}
+.flex-box .flex-label { font-size: 0.62rem; color: #818cf8; font-weight: 700; margin-bottom: 6px; }
+.flex-person {
+  background: #1a1035; border: 1px solid #6366f1; border-radius: 6px;
+  padding: 4px; margin-bottom: 4px; text-align: center;
+}
+.flex-person input {
+  background: transparent; border: none; color: #c4b5fd !important;
+  font-size: 0.63rem; font-weight: 600; text-align: center; width: 100%;
+}
+.flex-person input:focus { outline: 1px solid #f97316; border-radius: 3px; }
+.flex-person .fp-role { font-size: 0.5rem; color: #666; }
+.flex-person select.fp-select {
+  background: #1a1035; border: 1px solid #6366f1; border-radius: 4px;
+  color: #c4b5fd; font-size: 0.55rem; padding: 2px 4px; margin-top: 3px;
+  width: 100%; text-align: center; cursor: pointer;
+}
+.flex-person select.fp-select:focus { border-color: #f97316; outline: none; }
+
+
+.remove-btn {
+  position: absolute; top: -4px; right: -4px;
+  background: #dc2626; color: #fff; border-radius: 50%;
+  width: 14px; height: 14px; font-size: 10px; line-height: 14px;
+  text-align: center; cursor: pointer; display: none; font-weight: 700;
+}
+.person-chip:hover .remove-btn { display: block; }
+/* Legend */
+.legend { display: flex; gap: 10px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.6rem; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* Role counts */
+.role-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 10px; }
+.role-count { background: #1a1a2e; border: 1px solid #333; border-radius: 16px; padding: 3px 10px; font-size: 0.63rem; }
+.role-count .rc-num { font-weight: 700; color: #f97316; }
+
+/* Tips */
+.tips-section { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a3e; margin-top: 16px; }
+.tips-section h3 { font-size: 0.8rem; color: #f97316; margin-bottom: 8px; }
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tip-card { background: #0a0e1a; border: 1px solid #333; border-radius: 8px; padding: 10px; }
+.tip-card h4 { font-size: 0.7rem; color: #60a5fa; margin-bottom: 5px; }
+.tip-card li { font-size: 0.62rem; color: #bbb; padding: 2px 0; list-style: none; }
+.tip-card li::before { content: "▸ "; color: #f97316; }
+
+.footer-credit { text-align: center; margin-top: 20px; padding: 10px; font-size: 0.65rem; color: #444; border-top: 1px solid #1a1a2e; }
+.footer-credit span { color: #f97316; font-weight: 600; }
+
+button.add-btn {
+  background: #f97316; color: #000; border: none; border-radius: 5px;
+  padding: 4px 8px; font-size: 0.6rem; cursor: pointer; font-weight: 600; margin-top: 4px;
+}
+button.add-btn:hover { background: #fb923c; }
+</style>
+</head>
+<body>
+
+<!-- Profile Modal -->
+<div class="profile-modal" id="profileModal" style="display:none;">
+  <div class="profile-modal-box">
+    <h2>👤 Who's using this?</h2>
+    <p>Enter your name and set a password. Your allocations are private — only you can access them.</p>
+    <input id="profileNameInput" placeholder="Your name (e.g. Mahdi)" onkeydown="if(event.key==='Enter')document.getElementById('profilePwInput').focus()">
+    <input id="profilePwInput" type="password" placeholder="Password" style="margin-bottom:12px;" onkeydown="if(event.key==='Enter')confirmProfile()">
+    <button onclick="confirmProfile()">Login / Create</button>
+    <div id="profileError" style="color:#ff6b6b;font-size:0.6rem;margin-top:8px;display:none;"></div>
+    <div class="existing-profiles" id="existingProfiles"></div>
+  </div>
+</div>
+
+<div class="header"><h1>🚢 <span class="site-name" id="siteNameDisplay" onclick="editSiteName()">BWU6</span> SHIP DOCK — <span class="site-name" id="eventNameDisplay" onclick="editEventName()">PRIME</span> ALLOCATION</h1></div>
+<div class="sub-header">Visual Floor Plan | Lines 1-6 | Loaders at DD | <span class="profile-badge" id="profileBadge" onclick="switchProfile()">👤 —</span></div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#4ade80;"></div>Pallets</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#60a5fa;"></div>Water Spider</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24;"></div>Fluid Load</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e11d48;"></div>Loader</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f472b6;"></div>PG</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#818cf8;"></div>Flex</div>
+</div>
+
+<div class="date-bar">
+  <input type="date" id="datePicker" onchange="applyDatePicker()">
+  <button class="today-btn" onclick="setToday()">📅 Today</button>
+  <div class="target-group">
+    <span class="target-label">🎯 Target:</span>
+    <input class="target-input" id="targetInput" type="text" placeholder="e.g. 500" onchange="updateTarget(this.value)">
+    <span class="target-unit">units</span>
+  </div>
+</div>
+
+<div class="tabs" id="tabsBar"></div>
+
+<div id="dayPanels"></div>
+
+<div style="background:#2a0f0f;border:3px solid #dc2626;border-radius:12px;padding:16px;margin-bottom:16px;text-align:center;">
+  <div style="font-size:1.4rem;font-weight:900;color:#fca5a5;">⚠️ SAFETY FIRST ⚠️</div>
+  <div style="font-size:0.78rem;color:#fca5a5;margin-top:8px;line-height:1.6;">Work hard. Have fun. <strong>Go home safe.</strong><br>Every task can wait — your wellbeing cannot. Speak up, slow down, and protect yourself and your team.</div>
+</div>
+
+<div class="tips-section">
+  <h3>📦 Pallet Building &amp; Loading Tips</h3>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h4>Building Pallets</h4>
+      <ul>
+        <li>Max height: 1.8m — no exceptions</li>
+        <li>Heavy boxes on BOTTOM, light on TOP</li>
+        <li>Interlock boxes — alternate direction each layer</li>
+        <li>Build pallets NOT staging — keep out of walkways</li>
+        <li>Wrap: 5 wraps at base, 3 in middle, 3 at top</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>Loading &amp; Staging</h4>
+      <ul>
+        <li>Load based on CPT — earliest CPT loads first</li>
+        <li>Stage based on CPT — prioritise urgent departures</li>
+        <li>Keep dock clear at all times</li>
+        <li>If trucks late or TDR team late — let PA know immediately</li>
+        <li>Label all 4 sides — sort code visible from every angle</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>Water Spider</h4>
+      <ul>
+        <li>Supply pallet team — wrap, labels, carts</li>
+        <li>Move completed pallets to staging promptly</li>
+        <li>Balance WIP between paired lines</li>
+        <li>Flag PG if one line imbalanced</li>
+        <li>Ask team: need HC? Need pallet? Need pallet removed?</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>PG Checklist</h4>
+      <ul>
+        <li>Walk lines every 30 min — balance HC to volume</li>
+        <li>Track CPTs — know urgent departures</li>
+        <li>Escalate if vol &gt; 95% capacity</li>
+        <li>Brief at start: target, trucks, priority lanes</li>
+        <li>End: flush rodeo, confirm all trucks closed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="tips-section" style="margin-top:20px;">
+  <h3>📖 How It Works</h3>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h4>🔐 Login &amp; Profiles</h4>
+      <ul>
+        <li>First time: enter your name + set a password</li>
+        <li>Your allocations are saved privately under your profile</li>
+        <li>Next time: enter the same name + password to load your data</li>
+        <li>Click the 👤 badge at the top to switch profiles or log out</li>
+        <li>Others can't see or edit your data without your password</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>📅 Managing Days</h4>
+      <ul>
+        <li>Click <strong>📅 Today</strong> to set the current tab to today's date</li>
+        <li>Use the date picker to set any date for the active tab</li>
+        <li>Click <strong>+ Add Day</strong> to add more day tabs</li>
+        <li>Hover a tab and click × to remove it</li>
+        <li>Double-click any tab label to rename it manually</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>👥 Allocating People</h4>
+      <ul>
+        <li>Click <strong>+</strong> on any line to add a person (Pallets)</li>
+        <li>Type names directly into W/S, Loaders, and FL fields</li>
+        <li>HC counts update live — only filled names are counted</li>
+        <li>Flex people (Pick/Pack/5S) are NOT counted in Total HC</li>
+        <li>Set the 🎯 Target (units) per day at the top</li>
+      </ul>
+    </div>
+    <div class="tip-card">
+      <h4>✏️ Editing &amp; Customising</h4>
+      <ul>
+        <li>Click <strong>BWU6</strong> in the title to change site name</li>
+        <li>Click <strong>PRIME</strong> to change event name (Peak, BAU, etc.)</li>
+        <li>All changes save automatically to your profile</li>
+        <li>Your data stays even if you close the browser</li>
+        <li>Different users on the same link get separate data</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer-credit">Designed by <span>Mahdi Alizada</span></div>
+
+<script>
+var SITE_NAME = 'BWU6';
+var EVENT_NAME = 'PRIME';
+var DAYS = [
+  makeEmptyDay((function(){var d=new Date();var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return d.getDate()+' '+m[d.getMonth()];})())
+];
+
+var currentDay = 0;
+
+function getRoleClass(role) {
+  var r = (role||'').toLowerCase();
+  if (r === 'pallets') return 'role-pallet';
+  if (r === 'water spider' || r === 'ws') return 'role-ws';
+  if (r === 'fl') return 'role-fl';
+  if (r === 'loader') return 'role-loader';
+  if (r === 'pg') return 'role-pg';
+  if (r === 'pick' || r === 'flex') return 'role-pick';
+  return '';
+}
+
+var CURRENT_PROFILE = '';
+
+function getStorageKey() { return 'bwu6_alloc_' + CURRENT_PROFILE.toLowerCase().replace(/\s+/g,'_'); }
+function getProfileListKey() { return 'bwu6_alloc_profiles'; }
+
+function getProfiles() {
+  try { return JSON.parse(localStorage.getItem(getProfileListKey())) || {}; } catch(e) { return {}; }
+}
+function saveProfiles(obj) {
+  try { localStorage.setItem(getProfileListKey(), JSON.stringify(obj)); } catch(e) {}
+}
+
+function simpleHash(str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) { hash = ((hash << 5) - hash) + str.charCodeAt(i); hash |= 0; }
+  return hash.toString();
+}
+
+function showProfileModal() {
+  var modal = document.getElementById('profileModal');
+  modal.style.display = 'flex';
+  var profiles = getProfiles();
+  var container = document.getElementById('existingProfiles');
+  var names = Object.keys(profiles);
+  if (names.length > 0) {
+    container.innerHTML = '<div style="font-size:0.58rem;color:#666;margin-bottom:6px;">Or click an existing profile:</div>';
+    names.forEach(function(p) {
+      container.innerHTML += '<span onclick="prefillProfile(\'' + p.replace(/'/g,"\\'") + '\')">' + p + '</span>';
+    });
+  } else {
+    container.innerHTML = '';
+  }
+  document.getElementById('profileError').style.display = 'none';
+  document.getElementById('profileNameInput').focus();
+}
+
+function prefillProfile(name) {
+  document.getElementById('profileNameInput').value = name;
+  document.getElementById('profilePwInput').value = '';
+  document.getElementById('profilePwInput').focus();
+}
+
+function confirmProfile() {
+  var name = document.getElementById('profileNameInput').value.trim();
+  var pw = document.getElementById('profilePwInput').value;
+  if (!name) return;
+  if (!pw) { showProfileError('Please enter a password.'); return; }
+  
+  var profiles = getProfiles();
+  var pwHash = simpleHash(pw);
+  
+  if (profiles[name]) {
+    // Existing profile — check password
+    if (profiles[name] !== pwHash) {
+      showProfileError('Wrong password. Try again.');
+      return;
+    }
+  } else {
+    // New profile — save password hash
+    profiles[name] = pwHash;
+    saveProfiles(profiles);
+  }
+  
+  CURRENT_PROFILE = name;
+  try { localStorage.setItem('bwu6_alloc_last_profile', name); } catch(e) {}
+  try { localStorage.setItem('bwu6_alloc_last_pw', pwHash); } catch(e) {}
+  document.getElementById('profileModal').style.display = 'none';
+  document.getElementById('profileBadge').textContent = '👤 ' + name;
+  loadProfileData();
+  buildAll();
+  document.getElementById('targetInput').value = DAYS[currentDay].target || '';
+}
+
+function showProfileError(msg) {
+  var el = document.getElementById('profileError');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function switchProfile() {
+  document.getElementById('profileNameInput').value = '';
+  document.getElementById('profilePwInput').value = '';
+  try { localStorage.removeItem('bwu6_alloc_last_profile'); } catch(e) {}
+  try { localStorage.removeItem('bwu6_alloc_last_pw'); } catch(e) {}
+  showProfileModal();
+}
+
+function loadProfileData() {
+  try {
+    var s = localStorage.getItem(getStorageKey());
+    if (s) {
+      var parsed = JSON.parse(s);
+      DAYS = parsed.days || DAYS;
+      SITE_NAME = parsed.siteName || SITE_NAME;
+      EVENT_NAME = parsed.eventName || EVENT_NAME;
+    } else {
+      // Reset to empty defaults for new profile
+      DAYS = getEmptyDays();
+      SITE_NAME = 'BWU6';
+      EVENT_NAME = 'PRIME';
+    }
+  } catch(e) {}
+  document.getElementById('siteNameDisplay').textContent = SITE_NAME;
+  document.getElementById('eventNameDisplay').textContent = EVENT_NAME;
+  document.title = SITE_NAME + ' Ship Dock — ' + EVENT_NAME + ' Allocation';
+}
+
+function save() {
+  if (!CURRENT_PROFILE) return;
+  try { localStorage.setItem(getStorageKey(), JSON.stringify({days: DAYS, siteName: SITE_NAME, eventName: EVENT_NAME})); } catch(e) {}
+}
+
+function getEmptyDays() {
+  var today = new Date();
+  var label = formatDateLabel(today);
+  var title = formatDateTitle(today);
+  return [
+    makeEmptyDay(label)
+  ];
+}
+function makeEmptyDay(label) {
+  return { tabLabel: label || '+ New Day', title: label || '+ New Day', target:'', lines:{'1':[],'2':[],'3':[],'4':[],'5':[],'6':[]}, waterSpiders:[{name:'',zone:'1 & 2'},{name:'',zone:'3 & 4'},{name:'',zone:'5 & 6'}], loaders:{'DD205':{name:'',dd:'DD205',sublabel:''},'DD204':{name:'',dd:'DD204',sublabel:''},'DD203':{name:'',dd:'DD203',sublabel:''}}, fl:{name:''}, flex:[] };
+}
+
+// === Editable Event Name ===
+function editEventName() {
+  var el = document.getElementById('eventNameDisplay');
+  var input = document.createElement('input');
+  input.className = 'site-input';
+  input.value = EVENT_NAME;
+  input.style.width = '100px';
+  input.onblur = function() { finishEventEdit(input); };
+  input.onkeydown = function(e) { if(e.key==='Enter') input.blur(); };
+  el.replaceWith(input);
+  input.focus();
+  input.select();
+}
+function finishEventEdit(input) {
+  var val = input.value.trim() || EVENT_NAME;
+  EVENT_NAME = val.toUpperCase();
+  save();
+  var span = document.createElement('span');
+  span.className = 'site-name';
+  span.id = 'eventNameDisplay';
+  span.onclick = editEventName;
+  span.textContent = EVENT_NAME;
+  input.replaceWith(span);
+}
+
+// === Editable Site Name ===
+function editSiteName() {
+  var el = document.getElementById('siteNameDisplay');
+  var input = document.createElement('input');
+  input.className = 'site-input';
+  input.value = SITE_NAME;
+  input.onblur = function() { finishSiteEdit(input); };
+  input.onkeydown = function(e) { if(e.key==='Enter') input.blur(); };
+  el.replaceWith(input);
+  input.focus();
+  input.select();
+}
+function finishSiteEdit(input) {
+  var val = input.value.trim() || SITE_NAME;
+  SITE_NAME = val;
+  save();
+  var span = document.createElement('span');
+  span.className = 'site-name';
+  span.id = 'siteNameDisplay';
+  span.onclick = editSiteName;
+  span.textContent = SITE_NAME;
+  input.replaceWith(span);
+  document.title = SITE_NAME + ' Ship Dock — Prime Allocation';
+  buildAll();
+}
+
+// === Target per day ===
+function updateTarget(val) {
+  DAYS[currentDay].target = val;
+  save();
+}
+
+// === Date Picker & Today Button ===
+function formatDateLabel(dateObj) {
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return dateObj.getDate() + ' ' + months[dateObj.getMonth()];
+}
+function formatDateTitle(dateObj) {
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return dateObj.getDate() + ' ' + months[dateObj.getMonth()] + ' ' + dateObj.getFullYear();
+}
+function setToday() {
+  var today = new Date();
+  var label = formatDateLabel(today);
+  // Search for existing tab with today's date
+  var found = -1;
+  for (var i = 0; i < DAYS.length; i++) {
+    if (DAYS[i].tabLabel === label) { found = i; break; }
+  }
+  if (found >= 0) {
+    // Jump to that tab
+    currentDay = found;
+    switchDay(found);
+  } else {
+    // No plan for today — add a new empty tab with today's date
+    DAYS.push(makeEmptyDay(label));
+    DAYS[DAYS.length-1].title = formatDateTitle(today);
+    currentDay = DAYS.length - 1;
+    save();
+    buildAll();
+  }
+  document.getElementById('datePicker').value = today.toISOString().split('T')[0];
+}
+function applyDatePicker() {
+  var val = document.getElementById('datePicker').value;
+  if (!val) return;
+  var parts = val.split('-');
+  var d = new Date(parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]));
+  var label = formatDateLabel(d);
+  // Search for existing tab with that date
+  var found = -1;
+  for (var i = 0; i < DAYS.length; i++) {
+    if (DAYS[i].tabLabel === label) { found = i; break; }
+  }
+  if (found >= 0) {
+    // Jump to that tab
+    currentDay = found;
+    switchDay(found);
+  } else {
+    // No plan for that date — add a new empty tab with that date
+    DAYS.push(makeEmptyDay(label));
+    DAYS[DAYS.length-1].title = formatDateTitle(d);
+    currentDay = DAYS.length - 1;
+    save();
+    buildAll();
+  }
+}
+
+// === Editable Tab Dates ===
+function buildTabs() {
+  var bar = document.getElementById('tabsBar');
+  var h = '';
+  DAYS.forEach(function(day, i) {
+    h += '<div class="tab ' + (i === currentDay ? 'active' : '') + '" onclick="switchDay(' + i + ')" style="position:relative;">';
+    h += '<span class="tab-label" ondblclick="editTab(event,' + i + ')">' + day.tabLabel + '</span>';
+    if (DAYS.length > 1) {
+      h += '<span style="position:absolute;top:-5px;right:-5px;background:#dc2626;color:#fff;border-radius:50%;width:12px;height:12px;font-size:9px;line-height:12px;text-align:center;cursor:pointer;display:none;" class="tab-remove" onclick="event.stopPropagation();removeDay(' + i + ')">×</span>';
+    }
+    h += '</div>';
+  });
+  h += '<div class="tab tab-add-btn" onclick="addNewDay()" style="color:#4ade80;border-color:#4ade80;">+ Add Date</div>';
+  bar.innerHTML = h;
+}
+
+function addNewDay() {
+  // Show a date input inline
+  var bar = document.getElementById('tabsBar');
+  var addBtn = bar.querySelector('.tab-add-btn');
+  if (addBtn) {
+    var input = document.createElement('input');
+    input.type = 'date';
+    input.style.cssText = 'background:#1a1a2e;border:1px solid #4ade80;border-radius:6px;color:#e4e4ed;font-size:0.7rem;padding:5px 8px;margin-left:4px;';
+    input.onchange = function() {
+      var parts = input.value.split('-');
+      var d = new Date(parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]));
+      DAYS.push(makeEmptyDay(formatDateLabel(d)));
+      DAYS[DAYS.length-1].title = formatDateTitle(d);
+      currentDay = DAYS.length - 1;
+      save();
+      buildAll();
+    };
+    addBtn.replaceWith(input);
+    input.focus();
+  }
+}
+
+function removeDay(idx) {
+  if (DAYS.length <= 1) return;
+  DAYS.splice(idx, 1);
+  if (currentDay >= DAYS.length) currentDay = DAYS.length - 1;
+  save();
+  buildAll();
+}
+
+function editTab(e, idx) {
+  e.stopPropagation();
+  var span = e.target;
+  var input = document.createElement('input');
+  input.className = 'tab-input';
+  input.value = DAYS[idx].tabLabel;
+  input.onblur = function() { finishTabEdit(input, idx); };
+  input.onkeydown = function(ev) { if(ev.key==='Enter') input.blur(); };
+  span.replaceWith(input);
+  input.focus();
+  input.select();
+}
+function finishTabEdit(input, idx) {
+  var val = input.value.trim() || DAYS[idx].tabLabel;
+  DAYS[idx].tabLabel = val;
+  DAYS[idx].title = val;
+  save();
+  buildTabs();
+  buildAll();
+}
+
+function buildFloor(day, di) {
+  var h = '';
+  h += '<div class="day-panel ' + (di === currentDay ? 'active' : '') + '" id="day_' + di + '">';
+  h += '<div class="floor-container">';
+  h += '<div class="floor-title">' + day.title + ' — Ship Dock Floor</div>';
+
+  // Role bar — includes Total HC, Pallets, W/S, Loaders, FL
+  var pC = 0; Object.values(day.lines).forEach(function(a){a.forEach(function(p){if(p.name && p.name!=='New' && p.name.trim()!=='') pC++;});});
+  var wsC = 0; day.waterSpiders.forEach(function(w){if(w.name&&w.name.trim()!==''&&w.name.trim()!=='New') wsC++;});
+  var loaderC = 0; Object.values(day.loaders).forEach(function(ld){if(ld.name&&ld.name.trim()!==''&&ld.name.trim()!=='New') loaderC++;});
+  var flC = (day.fl && day.fl.name && day.fl.name.trim() !== '' && day.fl.name.trim() !== 'New') ? 1 : 0;
+  var flxC = 0; day.flex.forEach(function(f){if(f.name&&f.name!=='New'&&f.name.trim()!=='') flxC++;});
+  var total = pC + wsC + loaderC + flC;
+
+  h += '<div class="role-bar">';
+  h += '<div class="role-count">Total HC <span class="rc-num">' + total + '</span></div>';
+  h += '<div class="role-count">Pallets <span class="rc-num">' + pC + '</span></div>';
+  h += '<div class="role-count">W/S <span class="rc-num">' + wsC + '</span></div>';
+  h += '<div class="role-count">Loaders <span class="rc-num">' + loaderC + '</span></div>';
+  h += '<div class="role-count">FL <span class="rc-num">' + flC + '</span></div>';
+  h += '</div>';
+
+  h += '<div class="floor-main">';
+
+  // === LEFT: Lines area ===
+  h += '<div class="lines-area">';
+
+  // Water Spiders at FRONT
+  h += '<div class="ws-row">';
+  day.waterSpiders.forEach(function(ws, wi) {
+    h += '<div class="ws-zone">';
+    h += '<div class="ws-label">🕷️ W/S — Lines ' + ws.zone + '</div>';
+    h += '<input value="' + ws.name + '" onchange="updateWS(' + di + ',' + wi + ',this.value)">';
+    h += '</div>';
+  });
+  h += '</div>';
+
+  // Lines 1-6 with Loaders at front of 4,5,6
+  h += '<div class="floor-grid">';
+  for (var l = 1; l <= 6; l++) {
+    h += '<div class="line-col">';
+    h += '<div class="line-header">LINE ' + l + '</div>';
+    h += '<div class="line-people">';
+    var people = day.lines[String(l)] || [];
+    if (people.length === 0) {
+      h += '<div style="font-size:0.55rem;color:#444;padding:16px 0;">—</div>';
+    }
+    people.forEach(function(p, pi) {
+      h += '<div class="person-chip ' + getRoleClass(p.role) + '" style="position:relative;">';
+      h += '<input value="' + p.name + '" onchange="updateLine(' + di + ',' + l + ',' + pi + ',this.value)">';
+      h += '<div class="p-role">' + p.role + '</div>';
+      h += '<span class="remove-btn" onclick="removeLine(' + di + ',' + l + ',' + pi + ')">×</span>';
+      h += '</div>';
+    });
+    h += '<button class="add-btn" onclick="addToLine(' + di + ',' + l + ')">+</button>';
+    h += '</div>'; // line-people
+
+    // Loaders at front of lines 4, 5, 6
+    if (l === 4 && day.loaders['DD205']) {
+      h += buildLoaderFront(di, 'DD205', day.loaders['DD205']);
+    } else if (l === 5 && day.loaders['DD204']) {
+      h += buildLoaderFront(di, 'DD204', day.loaders['DD204']);
+    } else if (l === 6 && day.loaders['DD203']) {
+      h += buildLoaderFront(di, 'DD203', day.loaders['DD203']);
+    }
+
+    h += '</div>'; // line-col
+  }
+  h += '</div>'; // floor-grid
+  h += '</div>'; // lines-area
+
+  // === RIGHT: FL + Flex side panel ===
+  h += '<div class="side-panel">';
+
+  // FL (Fluid) box
+  h += '<div class="fl-box">';
+  h += '<div class="fl-label">📦 FLUID LOAD</div>';
+  h += '<input value="' + (day.fl ? day.fl.name : '') + '" onchange="updateFL(' + di + ',this.value)">';
+  h += '</div>';
+
+  // Flex box
+  h += '<div class="flex-box">';
+  h += '<div class="flex-label">🔄 FLEX TO PICK, PACK OR 5S</div>';
+  if (day.flex.length === 0) {
+    h += '<div style="font-size:0.55rem;color:#444;padding:8px 0;">— none —</div>';
+  }
+  day.flex.forEach(function(p, pi) {
+    h += '<div class="flex-person" style="position:relative;">';
+    h += '<input value="' + p.name + '" onchange="updateFlex(' + di + ',' + pi + ',this.value)">';
+    h += '<input class="fp-select" style="background:#1a1035;border:1px solid #6366f1;border-radius:4px;color:#c4b5fd;font-size:0.55rem;padding:2px 4px;margin-top:3px;width:100%;text-align:center;" ';
+    h += 'value="' + (p.role || 'Pick') + '" placeholder="Pick, Pack, 5S..." ';
+    h += 'onchange="updateFlexRole(' + di + ',' + pi + ',this.value)">';
+    h += '<span class="remove-btn" onclick="removeFlex(' + di + ',' + pi + ')" style="display:inline-block;position:absolute;top:-3px;right:-3px;">×</span>';
+    h += '</div>';
+  });
+  h += '<button class="add-btn" onclick="addFlex(' + di + ')" style="margin-top:6px;">+ Add</button>';
+  h += '</div>';
+
+  h += '</div>'; // side-panel
+
+  h += '</div>'; // floor-main
+  h += '</div></div>'; // floor-container, day-panel
+  return h;
+}
+
+function buildLoaderFront(di, dd, data) {
+  var h = '<div class="loader-front">';
+  h += '<div class="loader-label">🚛 LOADER</div>';
+  if (data.sublabel) h += '<div class="loader-sublabel">' + data.sublabel + '</div>';
+  h += '<span class="dd-tag">' + dd + '</span>';
+  h += '<input class="loader-name" value="' + data.name + '" onchange="updateLoader(' + di + ',\'' + dd + '\',this.value)">';
+  if (data.role) h += '<div class="loader-sublabel">' + data.role + '</div>';
+  h += '</div>';
+  return h;
+}
+
+function updateLine(di, line, pi, val) { DAYS[di].lines[String(line)][pi].name = val; save(); buildAll(); }
+function updateWS(di, wi, val) { DAYS[di].waterSpiders[wi].name = val; save(); buildAll(); }
+function updateLoader(di, dd, val) { DAYS[di].loaders[dd].name = val; save(); buildAll(); }
+function updateFL(di, val) { DAYS[di].fl.name = val; save(); buildAll(); }
+function updateFlex(di, pi, val) { DAYS[di].flex[pi].name = val; save(); }
+function updateFlexRole(di, pi, val) { DAYS[di].flex[pi].role = val; save(); }
+function removeLine(di, line, pi) { DAYS[di].lines[String(line)].splice(pi, 1); save(); buildAll(); }
+function addToLine(di, line) { DAYS[di].lines[String(line)].push({name:'New',role:'Pallets'}); save(); buildAll(); }
+function removeFlex(di, pi) { DAYS[di].flex.splice(pi, 1); save(); buildAll(); }
+function addFlex(di) { DAYS[di].flex.push({name:'New',role:'Flex'}); save(); buildAll(); }
+
+function buildAll() {
+  var container = document.getElementById('dayPanels');
+  var h = '';
+  DAYS.forEach(function(day, i) { h += buildFloor(day, i); });
+  container.innerHTML = h;
+  buildTabs();
+}
+
+function switchDay(idx) {
+  currentDay = idx;
+  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', i===idx); });
+  document.querySelectorAll('.day-panel').forEach(function(p,i){ p.classList.toggle('active', i===idx); });
+  document.getElementById('targetInput').value = DAYS[idx].target || '';
+  document.getElementById('datePicker').value = '';
+}
+
+
+// Init: check for last profile or show modal
+try {
+  var lastProfile = localStorage.getItem('bwu6_alloc_last_profile');
+  var lastPw = localStorage.getItem('bwu6_alloc_last_pw');
+  if (lastProfile && lastPw) {
+    var profiles = getProfiles();
+    if (profiles[lastProfile] && profiles[lastProfile] === lastPw) {
+      CURRENT_PROFILE = lastProfile;
+      document.getElementById('profileBadge').textContent = '👤 ' + lastProfile;
+      loadProfileData();
+      buildAll();
+      document.getElementById('targetInput').value = DAYS[currentDay].target || '';
+    } else {
+      showProfileModal();
+      buildAll();
+    }
+  } else {
+    showProfileModal();
+    buildAll();
+  }
+} catch(e) {}
+
+</script>
+
+
+</body></html>

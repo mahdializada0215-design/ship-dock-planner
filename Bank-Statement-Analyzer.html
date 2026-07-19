@@ -1175,6 +1175,7 @@ function autoCategory(desc, type) {
 // ========== MONTH FILTER ==========
 function populateMonthFilter() {
   var sel = document.getElementById('monthFilter');
+  var currentVal = sel.value || 'all';
   var months = {};
   transactions.forEach(function(t) {
     var parts = t.date.split('/');
@@ -1197,6 +1198,7 @@ function populateMonthFilter() {
     html += '<option value="' + m + '">' + monthNames[parseInt(parts[0])] + ' ' + parts[1] + '</option>';
   });
   sel.innerHTML = html;
+  sel.value = currentVal;
   sel.style.display = transactions.length > 0 ? '' : 'none';
 }
 
